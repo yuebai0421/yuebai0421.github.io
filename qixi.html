@@ -1,0 +1,179 @@
+<html>
+<head>
+    <title>七夕快乐！</title>
+    <meta http-equiv="Content-Type" content="textml; charset=UTF-8">
+    <script type="text/javascript" src="./Love_files/jquery.min.js"></script>
+    <link rel="stylesheet" href="./Love_files/normalize.min.css">
+    <link rel="stylesheet" href="./Love_files/style.css">
+
+    <style type="text/css">
+        .disp1{
+            display: none;
+        }
+        .disp2{
+            display: none;
+        }
+        .disp3{
+            display: none;
+        }
+        .disp10{
+            display: none;
+        }
+    </style>
+
+</head>
+<body style="background: #ffe">
+<div>
+
+    <div style="position:relative; width: 100%;height: 100%;">
+
+        <div class="div1" style="position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);">
+            <canvas id="c"></canvas>
+        </div>
+
+        <div style="position:absolute;top:50%;left:30%;transform:translate(-50%,-50%);">
+
+            <div class="disp1">
+                <div class="cascading-text cascading-text--enter">
+                    <div class="cascading-text__replay ab tx--warning" style="display: none"><h2>replay?</h2></div>
+                    <div class="cascading-text__letter tx--warning"><h1>我</h1></div>
+                    <div class="cascading-text__letter tx--warning"><h1>亲</h1></div>
+                    <div class="cascading-text__letter tx--warning"><h1>爱</h1></div>
+                    <div class="cascading-text__letter tx--warning"><h1>的</h1></div>
+                    <div class="cascading-text__letter tx--red"><h1>宝</h1></div>
+                    <div class="cascading-text__letter tx--red"><h1>贝</h1></div>
+                    <div class="cascading-text__letter tx--red"><h1>玥</h1></div>
+                    <div class="cascading-text__letter tx--red"><h1>玥</h1></div>
+                </div>
+            </div>
+            <div class="disp2">
+                <div class="cascading-text cascading-text--fold">
+                    <div class="cascading-text__replay ac tx--warning" style="display: none"><h2>replay?</h2></div>
+                    <div class="cascading-text__letter tx--warning"><h2>七</h2></div>
+                    <div class="cascading-text__letter tx--warning"><h2>夕</h2></div>
+                    <div class="cascading-text__letter tx--warning"><h2>节</h2></div>
+                    <div class="cascading-text__letter tx--red"><h2>快</h2></div>
+                    <div class="cascading-text__letter tx--red"><h2>乐</h2></div>
+                    <div class="cascading-text__letter tx--red"><h2>\</h2></div>
+                    <div class="cascading-text__letter tx--red"><h2>^</h2></div>
+                    <div class="cascading-text__letter tx--red"><h2>O</h2></div>
+                    <div class="cascading-text__letter tx--red"><h2>^</h2></div>
+                    <div class="cascading-text__letter tx--red"><h2>/</h2></div>
+                </div>
+            </div>
+            <div class="disp10" style="inset-inline: 0px">
+                <div class="cascading-text cascading-text--enter">
+                    <div class="cascading-text__replay ad tx--warning" style="display: none"><h3>replay?</h3></div>
+                    <div class="cascading-text__letter tx--warning"><h3>一</h3></div>
+                    <div class="cascading-text__letter tx--warning"><h3>朵</h3></div>
+                    <div class="cascading-text__letter tx--warning"><h3>玫</h3></div>
+                    <div class="cascading-text__letter tx--warning"><h3>瑰</h3></div>
+                    <div class="cascading-text__letter tx--red"><h3>送</h3></div>
+                    <div class="cascading-text__letter tx--red"><h3>给</h3></div>
+                    <div class="cascading-text__letter tx--red"><h3>你</h3></div>
+                    <div class="cascading-text__letter tx--red"><h3>~</h3></div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="disp3" style="position:absolute;top:25%;left:50%;transform:translate(-50%,-50%);">
+            <a href="https://yuebai0421.github.io"><img src="static/1.png" style="width: 150px;height: 150px;"></a>
+        </div>
+
+
+
+    </div>
+
+</div>
+<script src="./Love_files/script.js"></script>
+<script>
+    var b = document.body;
+    var c = document.getElementsByTagName('canvas')[0];
+    var a = c.getContext('2d');
+    document.body.clientWidth;
+
+    var interval1=setInterval(function(){
+        console.log("==================");
+        $(".div1").animate({left: "1100"}, 2000);
+
+        window.clearInterval(interval1);
+
+    },5000);
+    var interval2=setInterval(function(){
+        console.log("==================");
+
+        $(".disp1").removeClass();
+        $(".ab").trigger("click");
+        window.clearInterval(interval2);
+
+    },8000);
+    var interval3=setInterval(function(){
+        console.log("==================");
+
+        $(".disp2").removeClass();
+        $(".ac").trigger("click");
+        window.clearInterval(interval3);
+
+    },10000);
+    var interval4=setInterval(function(){
+        console.log("==================");
+
+        $(".disp10").removeClass();
+        $(".ad").trigger("click");
+        window.clearInterval(interval4);
+
+    },12000);
+
+    var interval5=setInterval(function(){
+        console.log("==================");
+
+        $(".disp3").removeClass();
+        window.clearInterval(interval5);
+
+    },15000);
+
+</script>
+<script>
+    with (m = Math) C = cos,
+        S = sin,
+        P = pow,
+        R = random;
+    c.width = c.height = f = 600;
+    h = -250;
+
+    function p(a, b, c) {
+        if (c > 60)
+            return [S(a * 7) * (13 + 5 / (.2 + P(b * 4, 4))) - S(b) * 50, b * f + 50, 625 + C(a * 7) * (13 + 5 / (.2 + P(b * 4, 4))) + b * 400, a * 1 - b / 2, a];
+        A = a * 2 - 1;
+        B = b * 2 - 1;
+        if (A * A + B * B < 1) {
+            if (c > 37) {
+                n = (j = c & 1) ? 6 : 4;
+                o = .5 / (a + .01) + C(b * 125) * 3 - a * 300;
+                w = b * h;
+                return [o * C(n) + w * S(n) + j * 610 - 390, o * S(n) - w * C(n) + 550 - j * 350, 1180 + C(B + A) * 99 - j * 300, .4 - a * .1 + P(1 - B * B, -h * 6) * .15 - a * b * .4 + C(a + b) / 5 + P(C((o * (a + 1) + (B > 0 ? w : -w)) / 25), 30) * .1 * (1 - B * B), o / 1e3 + .7 - o * w * 3e-6]
+            }
+            if (c > 32) {
+                c = c * 1.16 - .15;
+                o = a * 45 - 20;
+                w = b * b * h;
+                z = o * S(c) + w * C(c) + 620;
+                return [o * C(c) - w * S(c), 28 + C(B * .5) * 99 - b * b * b * 60 - z / 2 - h, z, (b * b * .3 + P((1 - (A * A)), 7) * .15 + .3) * b, b * .7]
+            }
+            o = A * (2 - b) * (80 - c * 2);
+            w = 99 - C(A) * 120 - C(b) * (-h - c * 4.9) + C(P(1 - b, 7)) * 50 + c * 2;
+            z = o * S(c) + w * C(c) + 700;
+            return [o * C(c) - w * S(c), B * 99 - C(P(b, 7)) * 50 - c / 3 - z / 1.35 + 450, z, (1 - b / 1.2) * .9 + a * .1, P((1 - b), 20) / 4 + .05]
+        }
+    }
+
+    setInterval('' +
+        'for(i=0;i<1e4;i++)' +
+        'if(s=p(R(),R(),i%46/.74)){' +
+        'z=s[2];x=~~(s[0]*f/z-h);y=~~(s[1]*f/z-h);' +
+        'if(!m[q=y*f+x]|m[q]>z)m[q]=z,a.fillStyle="rgb("+~(s[3]*h)+","+~(s[4]*h)+","+~(s[3]*s[3]*-80)+")",a.fillRect(x,y,1,1)' +
+        '}', 0)
+</script>
+</body>
+</html>
