@@ -860,12 +860,35 @@
                     class="digit"></span> 分钟 <span class="digit"></span> 秒
             </div>
         </div>
-        <canvas id="canvas" width="1100" height="680" class="" style="background: none;"></canvas>
+        <canvas onclick="a()" id="canvas" width="1100" height="680" class="" style="background: none;"></canvas>
     </div>
-    <audio src="love.mp3" autoplay="autoplay"></audio>
+    <audio id="audio" src="static/iandyou.mp3" autoplay="autoplay"></audio>
 </div>
 
 <script>
+    var oAudio=$('#audio').get(0);
+
+    var onoff=true;
+
+    oAudio.src=data.audio;//音乐加载完毕
+
+    oAudio.on(canplaythrough,function(){
+
+        oAudio.play();
+
+    })//首先监测音乐是否加载完毕，若加载完则在function()中进行后续操作，播放音乐及暂停
+
+    function a() {
+        if(onoff){
+
+            onoff=false;
+
+            oAudio.play();
+
+        }
+    }
+
+
 </script>
 
 <script>
