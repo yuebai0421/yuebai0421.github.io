@@ -1,0 +1,1031 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0038)https://cosyer.github.io/jelly/love/1/ -->
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">.swal-icon--error {
+        border-color: #f27474;
+        -webkit-animation: animateErrorIcon .5s;
+        animation: animateErrorIcon .5s
+    }
+
+    .swal-icon--error__x-mark {
+        position: relative;
+        display: block;
+        -webkit-animation: animateXMark .5s;
+        animation: animateXMark .5s
+    }
+
+    .swal-icon--error__line {
+        position: absolute;
+        height: 5px;
+        width: 47px;
+        background-color: #f27474;
+        display: block;
+        top: 37px;
+        border-radius: 2px
+    }
+
+    .swal-icon--error__line--left {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        left: 17px
+    }
+
+    .swal-icon--error__line--right {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        right: 16px
+    }
+
+    @-webkit-keyframes animateErrorIcon {
+        0% {
+            -webkit-transform: rotateX(100deg);
+            transform: rotateX(100deg);
+            opacity: 0
+        }
+        to {
+            -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+            opacity: 1
+        }
+    }
+
+    @keyframes animateErrorIcon {
+        0% {
+            -webkit-transform: rotateX(100deg);
+            transform: rotateX(100deg);
+            opacity: 0
+        }
+        to {
+            -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg);
+            opacity: 1
+        }
+    }
+
+    @-webkit-keyframes animateXMark {
+        0% {
+            -webkit-transform: scale(.4);
+            transform: scale(.4);
+            margin-top: 26px;
+            opacity: 0
+        }
+        50% {
+            -webkit-transform: scale(.4);
+            transform: scale(.4);
+            margin-top: 26px;
+            opacity: 0
+        }
+        80% {
+            -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+            margin-top: -6px
+        }
+        to {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            margin-top: 0;
+            opacity: 1
+        }
+    }
+
+    @keyframes animateXMark {
+        0% {
+            -webkit-transform: scale(.4);
+            transform: scale(.4);
+            margin-top: 26px;
+            opacity: 0
+        }
+        50% {
+            -webkit-transform: scale(.4);
+            transform: scale(.4);
+            margin-top: 26px;
+            opacity: 0
+        }
+        80% {
+            -webkit-transform: scale(1.15);
+            transform: scale(1.15);
+            margin-top: -6px
+        }
+        to {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            margin-top: 0;
+            opacity: 1
+        }
+    }
+
+    .swal-icon--warning {
+        border-color: #f8bb86;
+        -webkit-animation: pulseWarning .75s infinite alternate;
+        animation: pulseWarning .75s infinite alternate
+    }
+
+    .swal-icon--warning__body {
+        width: 5px;
+        height: 47px;
+        top: 10px;
+        border-radius: 2px;
+        margin-left: -2px
+    }
+
+    .swal-icon--warning__body, .swal-icon--warning__dot {
+        position: absolute;
+        left: 50%;
+        background-color: #f8bb86
+    }
+
+    .swal-icon--warning__dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        margin-left: -4px;
+        bottom: -11px
+    }
+
+    @-webkit-keyframes pulseWarning {
+        0% {
+            border-color: #f8d486
+        }
+        to {
+            border-color: #f8bb86
+        }
+    }
+
+    @keyframes pulseWarning {
+        0% {
+            border-color: #f8d486
+        }
+        to {
+            border-color: #f8bb86
+        }
+    }
+
+    .swal-icon--success {
+        border-color: #a5dc86
+    }
+
+    .swal-icon--success:after, .swal-icon--success:before {
+        content: "";
+        border-radius: 50%;
+        position: absolute;
+        width: 60px;
+        height: 120px;
+        background: #fff;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg)
+    }
+
+    .swal-icon--success:before {
+        border-radius: 120px 0 0 120px;
+        top: -7px;
+        left: -33px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: 60px 60px;
+        transform-origin: 60px 60px
+    }
+
+    .swal-icon--success:after {
+        border-radius: 0 120px 120px 0;
+        top: -11px;
+        left: 30px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-transform-origin: 0 60px;
+        transform-origin: 0 60px;
+        -webkit-animation: rotatePlaceholder 4.25s ease-in;
+        animation: rotatePlaceholder 4.25s ease-in
+    }
+
+    .swal-icon--success__ring {
+        width: 80px;
+        height: 80px;
+        border: 4px solid hsla(98, 55%, 69%, .2);
+        border-radius: 50%;
+        box-sizing: content-box;
+        position: absolute;
+        left: -4px;
+        top: -4px;
+        z-index: 2
+    }
+
+    .swal-icon--success__hide-corners {
+        width: 5px;
+        height: 90px;
+        background-color: #fff;
+        padding: 1px;
+        position: absolute;
+        left: 28px;
+        top: 8px;
+        z-index: 1;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg)
+    }
+
+    .swal-icon--success__line {
+        height: 5px;
+        background-color: #a5dc86;
+        display: block;
+        border-radius: 2px;
+        position: absolute;
+        z-index: 2
+    }
+
+    .swal-icon--success__line--tip {
+        width: 25px;
+        left: 14px;
+        top: 46px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-animation: animateSuccessTip .75s;
+        animation: animateSuccessTip .75s
+    }
+
+    .swal-icon--success__line--long {
+        width: 47px;
+        right: 8px;
+        top: 38px;
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+        -webkit-animation: animateSuccessLong .75s;
+        animation: animateSuccessLong .75s
+    }
+
+    @-webkit-keyframes rotatePlaceholder {
+        0% {
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg)
+        }
+        5% {
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg)
+        }
+        12% {
+            -webkit-transform: rotate(-405deg);
+            transform: rotate(-405deg)
+        }
+        to {
+            -webkit-transform: rotate(-405deg);
+            transform: rotate(-405deg)
+        }
+    }
+
+    @keyframes rotatePlaceholder {
+        0% {
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg)
+        }
+        5% {
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg)
+        }
+        12% {
+            -webkit-transform: rotate(-405deg);
+            transform: rotate(-405deg)
+        }
+        to {
+            -webkit-transform: rotate(-405deg);
+            transform: rotate(-405deg)
+        }
+    }
+
+    @-webkit-keyframes animateSuccessTip {
+        0% {
+            width: 0;
+            left: 1px;
+            top: 19px
+        }
+        54% {
+            width: 0;
+            left: 1px;
+            top: 19px
+        }
+        70% {
+            width: 50px;
+            left: -8px;
+            top: 37px
+        }
+        84% {
+            width: 17px;
+            left: 21px;
+            top: 48px
+        }
+        to {
+            width: 25px;
+            left: 14px;
+            top: 45px
+        }
+    }
+
+    @keyframes animateSuccessTip {
+        0% {
+            width: 0;
+            left: 1px;
+            top: 19px
+        }
+        54% {
+            width: 0;
+            left: 1px;
+            top: 19px
+        }
+        70% {
+            width: 50px;
+            left: -8px;
+            top: 37px
+        }
+        84% {
+            width: 17px;
+            left: 21px;
+            top: 48px
+        }
+        to {
+            width: 25px;
+            left: 14px;
+            top: 45px
+        }
+    }
+
+    @-webkit-keyframes animateSuccessLong {
+        0% {
+            width: 0;
+            right: 46px;
+            top: 54px
+        }
+        65% {
+            width: 0;
+            right: 46px;
+            top: 54px
+        }
+        84% {
+            width: 55px;
+            right: 0;
+            top: 35px
+        }
+        to {
+            width: 47px;
+            right: 8px;
+            top: 38px
+        }
+    }
+
+    @keyframes animateSuccessLong {
+        0% {
+            width: 0;
+            right: 46px;
+            top: 54px
+        }
+        65% {
+            width: 0;
+            right: 46px;
+            top: 54px
+        }
+        84% {
+            width: 55px;
+            right: 0;
+            top: 35px
+        }
+        to {
+            width: 47px;
+            right: 8px;
+            top: 38px
+        }
+    }
+
+    .swal-icon--info {
+        border-color: #c9dae1
+    }
+
+    .swal-icon--info:before {
+        width: 5px;
+        height: 29px;
+        bottom: 17px;
+        border-radius: 2px;
+        margin-left: -2px
+    }
+
+    .swal-icon--info:after, .swal-icon--info:before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        background-color: #c9dae1
+    }
+
+    .swal-icon--info:after {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        margin-left: -3px;
+        top: 19px
+    }
+
+    .swal-icon {
+        width: 80px;
+        height: 80px;
+        border-width: 4px;
+        border-style: solid;
+        border-radius: 50%;
+        padding: 0;
+        position: relative;
+        box-sizing: content-box;
+        margin: 20px auto
+    }
+
+    .swal-icon:first-child {
+        margin-top: 32px
+    }
+
+    .swal-icon--custom {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        border: none;
+        border-radius: 0
+    }
+
+    .swal-icon img {
+        max-width: 100%;
+        max-height: 100%
+    }
+
+    .swal-title {
+        color: rgba(0, 0, 0, .65);
+        font-weight: 600;
+        text-transform: none;
+        position: relative;
+        display: block;
+        padding: 13px 16px;
+        font-size: 27px;
+        line-height: normal;
+        text-align: center;
+        margin-bottom: 0
+    }
+
+    .swal-title:first-child {
+        margin-top: 26px
+    }
+
+    .swal-title:not(:first-child) {
+        padding-bottom: 0
+    }
+
+    .swal-title:not(:last-child) {
+        margin-bottom: 13px
+    }
+
+    .swal-text {
+        font-size: 16px;
+        position: relative;
+        float: none;
+        line-height: normal;
+        vertical-align: top;
+        text-align: left;
+        display: inline-block;
+        margin: 0;
+        padding: 0 10px;
+        font-weight: 400;
+        color: rgba(0, 0, 0, .64);
+        max-width: calc(100% - 20px);
+        overflow-wrap: break-word;
+        box-sizing: border-box
+    }
+
+    .swal-text:first-child {
+        margin-top: 45px
+    }
+
+    .swal-text:last-child {
+        margin-bottom: 45px
+    }
+
+    .swal-footer {
+        text-align: right;
+        padding-top: 13px;
+        margin-top: 13px;
+        padding: 13px 16px;
+        border-radius: inherit;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0
+    }
+
+    .swal-button-container {
+        margin: 5px;
+        display: inline-block;
+        position: relative
+    }
+
+    .swal-button {
+        background-color: #7cd1f9;
+        color: #fff;
+        border: none;
+        box-shadow: none;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: 14px;
+        padding: 10px 24px;
+        margin: 0;
+        cursor: pointer
+    }
+
+    .swal-button:not([disabled]):hover {
+        background-color: #78cbf2
+    }
+
+    .swal-button:active {
+        background-color: #70bce0
+    }
+
+    .swal-button:focus {
+        outline: none;
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(43, 114, 165, .29)
+    }
+
+    .swal-button[disabled] {
+        opacity: .5;
+        cursor: default
+    }
+
+    .swal-button::-moz-focus-inner {
+        border: 0
+    }
+
+    .swal-button--cancel {
+        color: #555;
+        background-color: #efefef
+    }
+
+    .swal-button--cancel:not([disabled]):hover {
+        background-color: #e8e8e8
+    }
+
+    .swal-button--cancel:active {
+        background-color: #d7d7d7
+    }
+
+    .swal-button--cancel:focus {
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(116, 136, 150, .29)
+    }
+
+    .swal-button--danger {
+        background-color: #e64942
+    }
+
+    .swal-button--danger:not([disabled]):hover {
+        background-color: #df4740
+    }
+
+    .swal-button--danger:active {
+        background-color: #cf423b
+    }
+
+    .swal-button--danger:focus {
+        box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(165, 43, 43, .29)
+    }
+
+    .swal-content {
+        padding: 0 20px;
+        margin-top: 20px;
+        font-size: medium
+    }
+
+    .swal-content:last-child {
+        margin-bottom: 20px
+    }
+
+    .swal-content__input, .swal-content__textarea {
+        -webkit-appearance: none;
+        background-color: #fff;
+        border: none;
+        font-size: 14px;
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        border: 1px solid rgba(0, 0, 0, .14);
+        padding: 10px 13px;
+        border-radius: 2px;
+        transition: border-color .2s
+    }
+
+    .swal-content__input:focus, .swal-content__textarea:focus {
+        outline: none;
+        border-color: #6db8ff
+    }
+
+    .swal-content__textarea {
+        resize: vertical
+    }
+
+    .swal-button--loading {
+        color: transparent
+    }
+
+    .swal-button--loading ~ .swal-button__loader {
+        opacity: 1
+    }
+
+    .swal-button__loader {
+        position: absolute;
+        height: auto;
+        width: 43px;
+        z-index: 2;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+        text-align: center;
+        pointer-events: none;
+        opacity: 0
+    }
+
+    .swal-button__loader div {
+        display: inline-block;
+        float: none;
+        vertical-align: baseline;
+        width: 9px;
+        height: 9px;
+        padding: 0;
+        border: none;
+        margin: 2px;
+        opacity: .4;
+        border-radius: 7px;
+        background-color: hsla(0, 0%, 100%, .9);
+        transition: background .2s;
+        -webkit-animation: swal-loading-anim 1s infinite;
+        animation: swal-loading-anim 1s infinite
+    }
+
+    .swal-button__loader div:nth-child(3n+2) {
+        -webkit-animation-delay: .15s;
+        animation-delay: .15s
+    }
+
+    .swal-button__loader div:nth-child(3n+3) {
+        -webkit-animation-delay: .3s;
+        animation-delay: .3s
+    }
+
+    @-webkit-keyframes swal-loading-anim {
+        0% {
+            opacity: .4
+        }
+        20% {
+            opacity: .4
+        }
+        50% {
+            opacity: 1
+        }
+        to {
+            opacity: .4
+        }
+    }
+
+    @keyframes swal-loading-anim {
+        0% {
+            opacity: .4
+        }
+        20% {
+            opacity: .4
+        }
+        50% {
+            opacity: 1
+        }
+        to {
+            opacity: .4
+        }
+    }
+
+    .swal-overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 0;
+        overflow-y: auto;
+        background-color: rgba(0, 0, 0, .4);
+        z-index: 10000;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity .3s
+    }
+
+    .swal-overlay:before {
+        content: " ";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%
+    }
+
+    .swal-overlay--show-modal {
+        opacity: 1;
+        pointer-events: auto
+    }
+
+    .swal-overlay--show-modal .swal-modal {
+        opacity: 1;
+        pointer-events: auto;
+        box-sizing: border-box;
+        -webkit-animation: showSweetAlert .3s;
+        animation: showSweetAlert .3s;
+        will-change: transform
+    }
+
+    .swal-modal {
+        width: 478px;
+        opacity: 0;
+        pointer-events: none;
+        background-color: #fff;
+        text-align: center;
+        border-radius: 5px;
+        position: static;
+        margin: 20px auto;
+        display: inline-block;
+        vertical-align: middle;
+        -webkit-transform: scale(1);
+        transform: scale(1);
+        -webkit-transform-origin: 50% 50%;
+        transform-origin: 50% 50%;
+        z-index: 10001;
+        transition: opacity .2s, -webkit-transform .3s;
+        transition: transform .3s, opacity .2s;
+        transition: transform .3s, opacity .2s, -webkit-transform .3s
+    }
+
+    @media (max-width: 500px) {
+        .swal-modal {
+            width: calc(100% - 20px)
+        }
+    }
+
+    @-webkit-keyframes showSweetAlert {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1)
+        }
+        1% {
+            -webkit-transform: scale(.5);
+            transform: scale(.5)
+        }
+        45% {
+            -webkit-transform: scale(1.05);
+            transform: scale(1.05)
+        }
+        80% {
+            -webkit-transform: scale(.95);
+            transform: scale(.95)
+        }
+        to {
+            -webkit-transform: scale(1);
+            transform: scale(1)
+        }
+    }
+
+    @keyframes showSweetAlert {
+        0% {
+            -webkit-transform: scale(1);
+            transform: scale(1)
+        }
+        1% {
+            -webkit-transform: scale(.5);
+            transform: scale(.5)
+        }
+        45% {
+            -webkit-transform: scale(1.05);
+            transform: scale(1.05)
+        }
+        80% {
+            -webkit-transform: scale(.95);
+            transform: scale(.95)
+        }
+        to {
+            -webkit-transform: scale(1);
+            transform: scale(1)
+        }
+    }</style>
+    <title>Love</title>
+
+    <link type="text/css" rel="stylesheet" href="./Love_files/default.css">
+    <script type="text/javascript" src="./Love_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-parser.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-jit.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-builderbase.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-async.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-async-powerpack.min.js"></script>
+    <script type="text/javascript" src="./Love_files/functions.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./Love_files/love.js" charset="utf-8"></script>
+
+</head>
+<body>
+<div id="main">
+    <div id="error">亲，您使用的浏览器无法支持即将显示的内容，请换成谷歌(<a
+            href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&amp;brand=CHMI">Chrome</a>)或者火狐(<a
+            href="http://firefox.com.cn/download/">Firefox</a>)浏览器哟~
+    </div>
+    <div id="wrap">
+        <div id="text">
+            <div id="code" style="display: block; display: none">
+                <span class="say">我的爱人，我会牵着你的手，走到满头白发的那一天，</span><br>
+                <span class="say">我会守护你生命里的精彩，并陪伴你一路精彩下去。</span><br>
+                <span class="say">你的幸福快乐，是我一生的追求。</span><br>
+                <span class="say">我会每一天带着笑脸，和你说早安，</span><br>
+                <span class="say">我会每一晚与你道声晚安再入梦乡，</span><br>
+                <span class="say">我会带你去所有你想去的地方，</span><br>
+                <span class="say">陪你闹看你笑</span><br>
+                <span class="say">历经你生命中所有的点点滴滴。</span><br>
+                <span class="say">我期待这一生与你一起走过，</span><br>
+                <span class="say">我期待与你慢慢变老</span><br>
+                <span class="say">等我们老到哪儿也去不了，</span><br>
+                <span class="say">还能满载着一生的幸福快乐 ！</span><br>
+                <br>
+                <span class="say">我会为我们的未来撑起一片天空，</span><br>
+                <span class="say">为我们的将来担负起一生的责任，</span><br>
+                <span class="say">愿意为你去做每一件能让你开心快乐的事。</span><br>
+                <span class="say">所有我们经历的点点滴滴，</span><br>
+                <span class="say">都是我们一辈子最美的回忆。</span><br>
+                <span class="say">我愿意爱你直到老去！</span><br>
+                <br>
+                <span class="say"><span class="space"></span> -- Yours, wuxia2001.</span>
+                _
+            </div>
+        </div>
+        <div id="clock-box" style="display: block; display: none">
+            <a href="http://blog.csdn.net/wuxia2001" target="_blank">@wuxia2001</a> 与 <a
+                href="http://blog.csdn.net/wuxia2001" target="_blank">@月亮女</a> 在一起的
+            <div id="clock">第 <span class="digit">4434</span> 天 <span class="digit">17</span> 小时 <span
+                    class="digit">45</span> 分钟 <span class="digit">05</span> 秒
+            </div>
+        </div>
+        <canvas id="canvas" width="1100" height="680" class="" style="background: none;"></canvas>
+    </div>
+    <audio src="love.mp3" autoplay="autoplay"></audio>
+</div>
+
+<script>
+</script>
+
+<script>
+    (function () {
+        var canvas = $('#canvas');
+
+        if (!canvas[0].getContext) {
+            $("#error").show();
+            return false;
+        }
+
+        var width = canvas.width();
+        var height = canvas.height();
+
+        canvas.attr("width", width);
+        canvas.attr("height", height);
+
+        var opts = {
+            seed: {
+                x: width / 2 - 20,
+                color: "rgb(190, 26, 37)",
+                scale: 2
+            },
+            branch: [
+                [535, 680, 570, 250, 500, 200, 30, 100, [
+                    [540, 500, 455, 417, 340, 400, 13, 100, [
+                        [450, 435, 434, 430, 394, 395, 2, 40]
+                    ]],
+                    [550, 445, 600, 356, 680, 345, 12, 100, [
+                        [578, 400, 648, 409, 661, 426, 3, 80]
+                    ]],
+                    [539, 281, 537, 248, 534, 217, 3, 40],
+                    [546, 397, 413, 247, 328, 244, 9, 80, [
+                        [427, 286, 383, 253, 371, 205, 2, 40],
+                        [498, 345, 435, 315, 395, 330, 4, 60]
+                    ]],
+                    [546, 357, 608, 252, 678, 221, 6, 100, [
+                        [590, 293, 646, 277, 648, 271, 2, 80]
+                    ]]
+                ]]
+            ],
+            bloom: {
+                num: 700,
+                width: 1080,
+                height: 650,
+            },
+            footer: {
+                width: 1200,
+                height: 5,
+                speed: 10,
+            }
+        }
+
+        var tree = new Tree(canvas[0], width, height, opts);
+        var seed = tree.seed;
+        var foot = tree.footer;
+        var hold = 1;
+
+        canvas.click(function (e) {
+            var offset = canvas.offset(), x, y;
+            x = e.pageX - offset.left;
+            y = e.pageY - offset.top;
+            if (seed.hover(x, y)) {
+                hold = 0;
+                canvas.unbind("click");
+                canvas.unbind("mousemove");
+                canvas.removeClass('hand');
+            }
+        }).mousemove(function (e) {
+            var offset = canvas.offset(), x, y;
+            x = e.pageX - offset.left;
+            y = e.pageY - offset.top;
+            canvas.toggleClass('hand', seed.hover(x, y));
+        });
+
+        var seedAnimate = eval(Jscex.compile("async", function () {
+            seed.draw();
+            while (hold) {
+                $await(Jscex.Async.sleep(10));
+            }
+            while (seed.canScale()) {
+                seed.scale(0.95);
+                $await(Jscex.Async.sleep(10));
+            }
+            while (seed.canMove()) {
+                seed.move(0, 2);
+                foot.draw();
+                $await(Jscex.Async.sleep(10));
+            }
+        }));
+
+        var growAnimate = eval(Jscex.compile("async", function () {
+            do {
+                tree.grow();
+                $await(Jscex.Async.sleep(10));
+            } while (tree.canGrow());
+        }));
+
+        var flowAnimate = eval(Jscex.compile("async", function () {
+            do {
+                tree.flower(2);
+                $await(Jscex.Async.sleep(10));
+            } while (tree.canFlower());
+        }));
+
+        var moveAnimate = eval(Jscex.compile("async", function () {
+            tree.snapshot("p1", 240, 0, 610, 680);
+            while (tree.move("p1", 500, 0)) {
+                foot.draw();
+                $await(Jscex.Async.sleep(10));
+            }
+            foot.draw();
+            tree.snapshot("p2", 500, 0, 610, 680);
+
+            // 会有闪烁不得意这样做, (＞﹏＜)
+            canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
+            canvas.css("background", "#ffe");
+            $await(Jscex.Async.sleep(300));
+            canvas.css("background", "none");
+        }));
+
+        var jumpAnimate = eval(Jscex.compile("async", function () {
+            var ctx = tree.ctx;
+            while (true) {
+                tree.ctx.clearRect(0, 0, width, height);
+                tree.jump();
+                foot.draw();
+                $await(Jscex.Async.sleep(25));
+            }
+        }));
+
+        var textAnimate = eval(Jscex.compile("async", function () {
+            var together = new Date();
+            together.setFullYear(2010, 5, 8);
+            together.setHours(20);
+            together.setMinutes(20);
+            together.setSeconds(0);
+            together.setMilliseconds(0);
+
+            $("#code").show().typewriter();
+            $("#clock-box").fadeIn(500);
+            while (true) {
+                timeElapse(together);
+                $await(Jscex.Async.sleep(1000));
+            }
+        }));
+
+        var runAsync = eval(Jscex.compile("async", function () {
+            $await(seedAnimate());
+            $await(growAnimate());
+            $await(flowAnimate());
+            $await(moveAnimate());
+
+            textAnimate().start();
+
+            $await(jumpAnimate());
+        }));
+
+        runAsync().start();
+    })();
+</script>
+
+
+</body>
+</html>
