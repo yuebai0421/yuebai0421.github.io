@@ -140,7 +140,8 @@
             <td valign="middle" style="-ms-word-break: break-all;" rowspan="1" colspan="1">
                 <span class="ue_t" id="remark1" name="remark1" type="remark" remarktype="ALL">
                     <div style="padding-left:8px;color:#0066cc">同意! </div>
-                    <div align=right style="padding-right:30px;">辅导员审批  <font color="#339900">谢素青/教职工/教学部门/电子与信息工程学院</font>
+                    <div align=right style="padding-right:30px;">辅导员审批  <font
+                            color="#339900">谢素青/教职工/教学部门/电子与信息工程学院</font>
                      <font color="#999999"><span id="time2"></span></font></div>
                     <hr style="border: 1px dashed #cccccc; width: 98%; height: 1px;" align=left/>
                 </span>
@@ -175,67 +176,47 @@
 </body>
 </html>
 <script>
-    var show= function(){
-        var date = new Date();
+    var date = new Date();
+    var show = function () {
         var year = date.getFullYear();
-        var month = date.getMonth()+1;
-        month= month<10?"0"+month:month;
+        var month = date.getMonth() + 1;
+        month = month < 10 ? "0" + month : month;
         var day = date.getDate();//获取日期
-        day= day<10?"0"+day:day;
-        day=day-1;
-        var hour = date.getHours();
-        hour= hour<10?"0"+hour:hour;
-        var minute = date.getMinutes();
-        minute= minute<10?"0"+minute:minute;
-
-        result=year+"-"+month+"-"+day+" "+"15"+":"+"03";
-        document.getElementById("time").innerHTML=result;
+        day = day - 1;
+        day = day < 10 ? "0" + day : day;
+        result = year + "-" + month + "-" + day + " " + "15" + ":" + "03";
+        document.getElementById("time").innerHTML = result;
     }
-    var show2= function(){
-        var date = new Date();
+    var show2 = function () {
         var year = date.getFullYear();
-        var month = date.getMonth()+1;
-        month= month<10?"0"+month:month;
+        var month = date.getMonth() + 1;
+        month = month < 10 ? "0" + month : month;
         var day = date.getDate();//获取日期
-        day= day<10?"0"+day:day;
-        var hour = date.getHours();
-        hour= hour<10?"0"+hour:hour;
-        var minute = date.getMinutes();
-        minute= minute<10?"0"+minute:minute;
+        day = day < 10 ? "0" + day : day;
 
-        result=year+"-"+month+"-"+day+" "+"08"+":"+"00";
-        document.getElementById("KSSJ").innerHTML=result;
+        result = year + "-" + month + "-" + day + " " + "08" + ":" + "00";
+        document.getElementById("KSSJ").innerHTML = result;
     }
-    var show3= function(){
-        var date = new Date();
+    var show3 = function () {
         var year = date.getFullYear();
-        var month = date.getMonth()+1;
-        month= month<10?"0"+month:month;
+        var month = date.getMonth() + 1;
+        month = month < 10 ? "0" + month : month;
         var day = date.getDate();//获取日期
-        day= day<10?"0"+day:day;
-        var hour = date.getHours();
-        hour= hour<10?"0"+hour:hour;
-        var minute = date.getMinutes();
-        minute= minute<10?"0"+minute:minute;
+        day = day < 10 ? "0" + day : day;
 
-        result=year+"-"+month+"-"+day+" "+"22"+":"+"00";
-        document.getElementById("JSSJ").innerHTML=result;
+        result = year + "-" + month + "-" + day + " " + "22" + ":" + "00";
+        document.getElementById("JSSJ").innerHTML = result;
     }
-    var show4= function(){
-        var date = new Date();
+    var show4 = function () {
         var year = date.getFullYear();
-        var month = date.getMonth()+1;
-        month= month<10?"0"+month:month;
+        var month = date.getMonth() + 1;
+        month = month < 10 ? "0" + month : month;
         var day = date.getDate();//获取日期
-        day= day<10?"0"+day:day;
-        day=day-1;
-        var hour = date.getHours();
-        hour= hour<10?"0"+hour:hour;
-        var minute = date.getMinutes();
-        minute= minute<10?"0"+minute:minute;
+        day = day - 1;
+        day = day < 10 ? "0" + day : day;
 
-        result=year+"-"+month+"-"+day+" "+"16"+":"+"30";
-        document.getElementById("time2").innerHTML=result;
+        result = year + "-" + month + "-" + day + " " + "16" + ":" + "30";
+        document.getElementById("time2").innerHTML = result;
     }
     show();
     show2();

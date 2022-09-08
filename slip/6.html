@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<!-- saved from url=(0101)https://ehall.hypt.edu.cn/bpm/rule?wf_num=R_S003_B062&wf_docunid=b13d2fb304502043cd09364002be5705bd35 -->
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        .swal-icon--error {
+            border-color: #f27474;
+            -webkit-animation: animateErrorIcon .5s;
+            animation: animateErrorIcon .5s
+        }
+
+        .swal-icon--error__x-mark {
+            position: relative;
+            display: block;
+            -webkit-animation: animateXMark .5s;
+            animation: animateXMark .5s
+        }
+
+        .swal-icon--error__line {
+            position: absolute;
+            height: 5px;
+            width: 47px;
+            background-color: #f27474;
+            display: block;
+            top: 37px;
+            border-radius: 2px
+        }
+
+        .swal-icon--error__line--left {
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            left: 17px
+        }
+
+        .swal-icon--error__line--right {
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            right: 16px
+        }
+
+        @-webkit-keyframes animateErrorIcon {
+            0% {
+                -webkit-transform: rotateX(100deg);
+                transform: rotateX(100deg);
+                opacity: 0
+            }
+            to {
+                -webkit-transform: rotateX(0deg);
+                transform: rotateX(0deg);
+                opacity: 1
+            }
+        }
+
+        @keyframes animateErrorIcon {
+            0% {
+                -webkit-transform: rotateX(100deg);
+                transform: rotateX(100deg);
+                opacity: 0
+            }
+            to {
+                -webkit-transform: rotateX(0deg);
+                transform: rotateX(0deg);
+                opacity: 1
+            }
+        }
+
+        @-webkit-keyframes animateXMark {
+            0% {
+                -webkit-transform: scale(.4);
+                transform: scale(.4);
+                margin-top: 26px;
+                opacity: 0
+            }
+            50% {
+                -webkit-transform: scale(.4);
+                transform: scale(.4);
+                margin-top: 26px;
+                opacity: 0
+            }
+            80% {
+                -webkit-transform: scale(1.15);
+                transform: scale(1.15);
+                margin-top: -6px
+            }
+            to {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                margin-top: 0;
+                opacity: 1
+            }
+        }
+
+        @keyframes animateXMark {
+            0% {
+                -webkit-transform: scale(.4);
+                transform: scale(.4);
+                margin-top: 26px;
+                opacity: 0
+            }
+            50% {
+                -webkit-transform: scale(.4);
+                transform: scale(.4);
+                margin-top: 26px;
+                opacity: 0
+            }
+            80% {
+                -webkit-transform: scale(1.15);
+                transform: scale(1.15);
+                margin-top: -6px
+            }
+            to {
+                -webkit-transform: scale(1);
+                transform: scale(1);
+                margin-top: 0;
+                opacity: 1
+            }
+        }
+
+        .swal-icon--warning {
+            border-color: #f8bb86;
+            -webkit-animation: pulseWarning .75s infinite alternate;
+            animation: pulseWarning .75s infinite alternate
+        }
+
+        .swal-icon--warning__body {
+            width: 5px;
+            height: 47px;
+            top: 10px;
+            border-radius: 2px;
+            margin-left: -2px
+        }
+
+        .swal-icon--warning__body, .swal-icon--warning__dot {
+            position: absolute;
+            left: 50%;
+            background-color: #f8bb86
+        }
+
+        .swal-icon--warning__dot {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            margin-left: -4px;
+            bottom: -11px
+        }
+
+        @-webkit-keyframes pulseWarning {
+            0% {
+                border-color: #f8d486
+            }
+            to {
+                border-color: #f8bb86
+            }
+        }
+
+        @keyframes pulseWarning {
+            0% {
+                border-color: #f8d486
+            }
+            to {
+                border-color: #f8bb86
+            }
+        }
+
+        .swal-icon--success {
+            border-color: #a5dc86
+        }
+
+        .swal-icon--success:after, .swal-icon--success:before {
+            content: "";
+            border-radius: 50%;
+            position: absolute;
+            width: 60px;
+            height: 120px;
+            background: #fff;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg)
+        }
+
+        .swal-icon--success:before {
+            border-radius: 120px 0 0 120px;
+            top: -7px;
+            left: -33px;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            -webkit-transform-origin: 60px 60px;
+            transform-origin: 60px 60px
+        }
+
+        .swal-icon--success:after {
+            border-radius: 0 120px 120px 0;
+            top: -11px;
+            left: 30px;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            -webkit-transform-origin: 0 60px;
+            transform-origin: 0 60px;
+            -webkit-animation: rotatePlaceholder 4.25s ease-in;
+            animation: rotatePlaceholder 4.25s ease-in
+        }
+
+        .swal-icon--success__ring {
+            width: 80px;
+            height: 80px;
+            border: 4px solid hsla(98, 55%, 69%, .2);
+            border-radius: 50%;
+            box-sizing: content-box;
+            position: absolute;
+            left: -4px;
+            top: -4px;
+            z-index: 2
+        }
+
+        .swal-icon--success__hide-corners {
+            width: 5px;
+            height: 90px;
+            background-color: #fff;
+            padding: 1px;
+            position: absolute;
+            left: 28px;
+            top: 8px;
+            z-index: 1;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg)
+        }
+
+        .swal-icon--success__line {
+            height: 5px;
+            background-color: #a5dc86;
+            display: block;
+            border-radius: 2px;
+            position: absolute;
+            z-index: 2
+        }
+
+        .swal-icon--success__line--tip {
+            width: 25px;
+            left: 14px;
+            top: 46px;
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            -webkit-animation: animateSuccessTip .75s;
+            animation: animateSuccessTip .75s
+        }
+
+        .swal-icon--success__line--long {
+            width: 47px;
+            right: 8px;
+            top: 38px;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+            -webkit-animation: animateSuccessLong .75s;
+            animation: animateSuccessLong .75s
+        }
+
+        @-webkit-keyframes rotatePlaceholder {
+            0% {
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg)
+            }
+            5% {
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg)
+            }
+            12% {
+                -webkit-transform: rotate(-405deg);
+                transform: rotate(-405deg)
+            }
+            to {
+                -webkit-transform: rotate(-405deg);
+                transform: rotate(-405deg)
+            }
+        }
+
+        @keyframes rotatePlaceholder {
+            0% {
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg)
+            }
+            5% {
+                -webkit-transform: rotate(-45deg);
+                transform: rotate(-45deg)
+            }
+            12% {
+                -webkit-transform: rotate(-405deg);
+                transform: rotate(-405deg)
+            }
+            to {
+                -webkit-transform: rotate(-405deg);
+                transform: rotate(-405deg)
+            }
+        }
+
+        @-webkit-keyframes animateSuccessTip {
+            0% {
+                width: 0;
+                left: 1px;
+                top: 19px
+            }
+            54% {
+                width: 0;
+                left: 1px;
+                top: 19px
+            }
+            70% {
+                width: 50px;
+                left: -8px;
+                top: 37px
+            }
+            84% {
+                width: 17px;
+                left: 21px;
+                top: 48px
+            }
+            to {
+                width: 25px;
+                left: 14px;
+                top: 45px
+            }
+        }
+
+        @keyframes animateSuccessTip {
+            0% {
+                width: 0;
+                left: 1px;
+                top: 19px
+            }
+            54% {
+                width: 0;
+                left: 1px;
+                top: 19px
+            }
+            70% {
+                width: 50px;
+                left: -8px;
+                top: 37px
+            }
+            84% {
+                width: 17px;
+                left: 21px;
+                top: 48px
+            }
+            to {
+                width: 25px;
+                left: 14px;
+                top: 45px
+            }
+        }
+
+        @-webkit-keyframes animateSuccessLong {
+            0% {
+                width: 0;
+                right: 46px;
+                top: 54px
+            }
+            65% {
+                width: 0;
+                right: 46px;
+                top: 54px
+            }
+            84% {
+                width: 55px;
+                right: 0;
+                top: 35px
+            }
+            to {
+                width: 47px;
+                right: 8px;
+                top: 38px
+            }
+        }
+
+        @keyframes animateSuccessLong {
+            0% {
+                width: 0;
+                right: 46px;
+                top: 54px
+            }
+            65% {
+                width: 0;
+                right: 46px;
+                top: 54px
+            }
+            84% {
+                width: 55px;
+                right: 0;
+                top: 35px
+            }
+            to {
+                width: 47px;
+                right: 8px;
+                top: 38px
+            }
+        }
+
+        .swal-icon--info {
+            border-color: #c9dae1
+        }
+
+        .swal-icon--info:before {
+            width: 5px;
+            height: 29px;
+            bottom: 17px;
+            border-radius: 2px;
+            margin-left: -2px
+        }
+
+        .swal-icon--info:after, .swal-icon--info:before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            background-color: #c9dae1
+        }
+
+        .swal-icon--info:after {
+            width: 7px;
+            height: 7px;
+            border-radius: 50%;
+            margin-left: -3px;
+            top: 19px
+        }
+
+        .swal-icon {
+            width: 80px;
+            height: 80px;
+            border-width: 4px;
+            border-style: solid;
+            border-radius: 50%;
+            padding: 0;
+            position: relative;
+            box-sizing: content-box;
+            margin: 20px auto
+        }
+
+        .swal-icon:first-child {
+            margin-top: 32px
+        }
+
+        .swal-icon--custom {
+            width: auto;
+            height: auto;
+            max-width: 100%;
+            border: none;
+            border-radius: 0
+        }
+
+        .swal-icon img {
+            max-width: 100%;
+            max-height: 100%
+        }
+
+        .swal-title {
+            color: rgba(0, 0, 0, .65);
+            font-weight: 600;
+            text-transform: none;
+            position: relative;
+            display: block;
+            padding: 13px 16px;
+            font-size: 27px;
+            line-height: normal;
+            text-align: center;
+            margin-bottom: 0
+        }
+
+        .swal-title:first-child {
+            margin-top: 26px
+        }
+
+        .swal-title:not(:first-child) {
+            padding-bottom: 0
+        }
+
+        .swal-title:not(:last-child) {
+            margin-bottom: 13px
+        }
+
+        .swal-text {
+            font-size: 16px;
+            position: relative;
+            float: none;
+            line-height: normal;
+            vertical-align: top;
+            text-align: left;
+            display: inline-block;
+            margin: 0;
+            padding: 0 10px;
+            font-weight: 400;
+            color: rgba(0, 0, 0, .64);
+            max-width: calc(100% - 20px);
+            overflow-wrap: break-word;
+            box-sizing: border-box
+        }
+
+        .swal-text:first-child {
+            margin-top: 45px
+        }
+
+        .swal-text:last-child {
+            margin-bottom: 45px
+        }
+
+        .swal-footer {
+            text-align: right;
+            padding-top: 13px;
+            margin-top: 13px;
+            padding: 13px 16px;
+            border-radius: inherit;
+            border-top-left-radius: 0;
+            border-top-right-radius: 0
+        }
+
+        .swal-button-container {
+            margin: 5px;
+            display: inline-block;
+            position: relative
+        }
+
+        .swal-button {
+            background-color: #7cd1f9;
+            color: #fff;
+            border: none;
+            box-shadow: none;
+            border-radius: 5px;
+            font-weight: 600;
+            font-size: 14px;
+            padding: 10px 24px;
+            margin: 0;
+            cursor: pointer
+        }
+
+        .swal-button:not([disabled]):hover {
+            background-color: #78cbf2
+        }
+
+        .swal-button:active {
+            background-color: #70bce0
+        }
+
+        .swal-button:focus {
+            outline: none;
+            box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(43, 114, 165, .29)
+        }
+
+        .swal-button[disabled] {
+            opacity: .5;
+            cursor: default
+        }
+
+        .swal-button::-moz-focus-inner {
+            border: 0
+        }
+
+        .swal-button--cancel {
+            color: #555;
+            background-color: #efefef
+        }
+
+        .swal-button--cancel:not([disabled]):hover {
+            background-color: #e8e8e8
+        }
+
+        .swal-button--cancel:active {
+            background-color: #d7d7d7
+        }
+
+        .swal-button--cancel:focus {
+            box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(116, 136, 150, .29)
+        }
+
+        .swal-button--danger {
+            background-color: #e64942
+        }
+
+        .swal-button--danger:not([disabled]):hover {
+            background-color: #df4740
+        }
+
+        .swal-button--danger:active {
+            background-color: #cf423b
+        }
+
+        .swal-button--danger:focus {
+            box-shadow: 0 0 0 1px #fff, 0 0 0 3px rgba(165, 43, 43, .29)
+        }
+
+        .swal-content {
+            padding: 0 20px;
+            margin-top: 20px;
+            font-size: medium
+        }
+
+        .swal-content:last-child {
+            margin-bottom: 20px
+        }
+
+        .swal-content__input, .swal-content__textarea {
+            -webkit-appearance: none;
+            background-color: #fff;
+            border: none;
+            font-size: 14px;
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+            border: 1px solid rgba(0, 0, 0, .14);
+            padding: 10px 13px;
+            border-radius: 2px;
+            transition: border-color .2s
+        }
+
+        .swal-content__input:focus, .swal-content__textarea:focus {
+            outline: none;
+            border-color: #6db8ff
+        }
+
+        .swal-content__textarea {
+            resize: vertical
+        }
+
+        .swal-button--loading {
+            color: transparent
+        }
+
+        .swal-button--loading ~ .swal-button__loader {
+            opacity: 1
+        }
+
+        .swal-button__loader {
+            position: absolute;
+            height: auto;
+            width: 43px;
+            z-index: 2;
+            left: 50%;
+            top: 50%;
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            text-align: center;
+            pointer-events: none;
+            opacity: 0
+        }
+
+        .swal-button__loader div {
+            display: inline-block;
+            float: none;
+            vertical-align: baseline;
+            width: 9px;
+            height: 9px;
+            padding: 0;
+            border: none;
+            margin: 2px;
+            opacity: .4;
+            border-radius: 7px;
+            background-color: hsla(0, 0%, 100%, .9);
+            transition: background .2s;
+            -webkit-animation: swal-loading-anim 1s infinite;
+            animation: swal-loading-anim 1s infinite
+        }
+
+        .swal-button__loader div:nth-child(3n+2) {
+            -webkit-animation-delay: .15s;
+            animation-delay: .15s
+        }
+
+        .swal-button__loader div:nth-child(3n+3) {
+            -webkit-animation-delay: .3s;
+            animation-delay: .3s
+        }
+
+        @-webkit-keyframes swal-loading-anim {
+            0% {
+                opacity: .4
+            }
+            20% {
+                opacity: .4
+            }
+            50% {
+                opacity: 1
+            }
+            to {
+                opacity: .4
+            }
+        }
+
+        @keyframes swal-loading-anim {
+            0% {
+                opacity: .4
+            }
+            20% {
+                opacity: .4
+            }
+            50% {
+                opacity: 1
+            }
+            to {
+                opacity: .4
+            }
+        }
+
+        .swal-overlay {
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-size: 0;
+            overflow-y: auto;
+            background-color: rgba(0, 0, 0, .4);
+            z-index: 10000;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity .3s
+        }
+
+        .swal-overlay:before {
+            content: " ";
+            display: inline-block;
+            vertical-align: middle;
+            height: 100%
+        }
+
+        .swal-overlay--show-modal {
+            opacity: 1;
+            pointer-events: auto
+        }
+
+        .swal-overlay--show-modal .swal-modal {
+            opacity: 1;
+            pointer-events: auto;
+            box-sizing: border-box;
+            -webkit-animation: showSweetAlert .3s;
+            animation: showSweetAlert .3s;
+            will-change: transform
+        }
+
+        .swal-modal {
+            width: 478px;
+            opacity: 0;
+            pointer-events: none;
+            background-color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            position: static;
+            margin: 20px auto;
+            display: inline-block;
+            vertical-align: middle;
+            -webkit-transform: scale(1);
+            transform: scale(1);
+            -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+            z-index: 10001;
+            transition: opacity .2s, -webkit-transform .3s;
+            transition: transform .3s, opacity .2s;
+            transition: transform .3s, opacity .2s, -webkit-transform .3s
+        }
+
+        @media (max-width: 500px) {
+            .swal-modal {
+                width: calc(100% - 20px)
+            }
+        }
+
+        @-webkit-keyframes showSweetAlert {
+            0% {
+                -webkit-transform: scale(1);
+                transform: scale(1)
+            }
+            1% {
+                -webkit-transform: scale(.5);
+                transform: scale(.5)
+            }
+            45% {
+                -webkit-transform: scale(1.05);
+                transform: scale(1.05)
+            }
+            80% {
+                -webkit-transform: scale(.95);
+                transform: scale(.95)
+            }
+            to {
+                -webkit-transform: scale(1);
+                transform: scale(1)
+            }
+        }
+
+        @keyframes showSweetAlert {
+            0% {
+                -webkit-transform: scale(1);
+                transform: scale(1)
+            }
+            1% {
+                -webkit-transform: scale(.5);
+                transform: scale(.5)
+            }
+            45% {
+                -webkit-transform: scale(1.05);
+                transform: scale(1.05)
+            }
+            80% {
+                -webkit-transform: scale(.95);
+                transform: scale(.95)
+            }
+            to {
+                -webkit-transform: scale(1);
+                transform: scale(1)
+            }
+        }</style>
+<!--    <script async=""-->
+<!--            src="https://127.0.0.1:57071/json.htm?callback=jQuery19005015249523832552_1662557094594&amp;_=1662557094595"></script>-->
+<!--    <script src="http://localhost:18000/CLodopfuncs.js?priority=0"></script>-->
+<!--    <script src="http://localhost:8000/CLodopfuncs.js?priority=1"></script>-->
+    <title>学生请假流程_庄紫雯_20220908</title>
+    <link rel="stylesheet" type="text/css" href="./jiatiao/easyui.css">
+    <link rel="stylesheet" type="text/css" href="./jiatiao/icon.css">
+    <link rel="stylesheet" type="text/css" href="./jiatiao/engine_openform.css">
+    <script type="text/javascript" src="./jiatiao/zh_CN.js"></script>
+    <script type="text/javascript" src="./jiatiao/jquery.min.js"></script>
+    <script type="text/javascript" src="./jiatiao/jquery.easyui.min.js"></script>
+<!--    <script type="text/javascript" src="./jiatiao/sharefunction.js"></script>-->
+<!--    <script type="text/javascript" src="./jiatiao/engine_openform.js"></script>-->
+<!--    <script type="text/javascript" src="./jiatiao/uivalidate.js"></script>-->
+<!--    <script type="text/javascript" src="./jiatiao/viewgrid.js"></script>-->
+<!--    <script type="text/javascript" src="./jiatiao/engine_custom.js"></script>-->
+<!--    <script type="text/javascript" src="./jiatiao/easyui-lang-zh_CN.js"></script>-->
+<!--    <script type="text/javascript" src="./jiatiao/LodopFuncs.js"></script>-->
+<!--    <script type="text/javascript" src="./jiatiao/pageoffice.js" id="po_js_main"></script>-->
+    <link rel="stylesheet" type="text/css" href="./jiatiao/pobstyle.css">
+<!--    <script type="text/javascript" src="./jiatiao/dynamicTable2.js"></script>-->
+    <script>
+        function formonload() {
+            var WF_CurrentNodeid = $("#WF_CurrentNodeid").val();//获取当前节点id
+            if (WF_CurrentNodeid == "T10003") {//若为首节点则判断
+                var WF_Processid = $("#WF_Processid").val();
+                var url = "rule?wf_num=R_S029_P283";
+                var num = 1;
+                var wf_status = "Current";//Current,ARC
+                var dataJson = {
+                    "WF_Processid": WF_Processid,
+                    "num": num,
+                    "wf_status": wf_status,
+                    "WF_CurrentNodeid": WF_CurrentNodeid
+                };
+                $.ajax({
+                    type: 'POST',
+                    url: url,
+                    data: dataJson,
+                    success: function (res) {
+                        // if(res.indexOf("ok") == -1){
+                        //     var resArr = res.split(",");
+                        //     alert("学生请假事务同时在办数量限制为 " + num + " ，目前在办数量为 " + resArr[0] + "\r\n请将在办事务结办后且在办数量不超过 " + num + " 时再行申请\r\n请检查您申请的事务,若有未确认事务请尽快确认");
+                        //     closeWindows();
+                        // }
+                    }
+                });
+            }
+        }
+
+        function formonsubmit() {
+            //return false to exit submit
+            var WF_CurrentNodeid = $("#WF_CurrentNodeid").val();
+            if ("T10003" == WF_CurrentNodeid) {
+                var QJTSSL = $("#QJTSSL").val();
+                return checkNum(QJTSSL);
+            }
+        }
+
+        function SaveDocumentCallBack(btnAction, rs) {
+            //保存成功后的回调函数
+            alert(rs.msg);
+            try {
+                opener.$('#dg').datagrid('reload');
+            } catch (e) {
+            }
+            window.close();
+        }
+
+        //再次验证请假天数是否为数字
+        function checkNum(number) {
+            var re = /^[0-9]+.?[0-9]*/;
+            if (!re.test(number)) {
+                alert("请假天数请输入数字");
+                return false;
+            } else {
+                return true;
+            }
+        }
+    </script>
+</head>
+<body style="margin: 46px 5px 0px; zoom: 1;" scroll="auto">
+<form action="https://ehall.hypt.edu.cn/bpm/rule?wf_num=R_S003_B062&amp;wf_docunid=b13d2fb304502043cd09364002be5705bd35"
+      method="post" name="linkeyform" id="linkeyform">
+    <table width="100%" border="0" cellpadding="2" cellspacing="6" class="ApprovalToptable" id="TopFormTable">
+        <tbody>
+        <tr>
+            <td colspan="2" align="center"
+                style="padding-top:5px;font-size:20px;font-family:微软雅黑,宋体;color:#000"><b>学生请假流程</b>
+            </td>
+        </tr>
+        <tr style="line-height:20px">
+            <td>
+                当前状态:已结束<br>
+                当前处理人:<br>
+                审批日记:<a
+                    href="https://ehall.hypt.edu.cn/bpm/rule?wf_num=R_S003_B062&amp;wf_docunid=b13d2fb304502043cd09364002be5705bd35"
+            >查看审批日记</a>
+            </td>
+            <td align="right">
+                申请时间:<span id="time"></span><br>
+                申请人:庄紫雯<br>
+                流程图:<a
+                    href="https://ehall.hypt.edu.cn/bpm/rule?wf_num=R_S003_B062&amp;wf_docunid=b13d2fb304502043cd09364002be5705bd35"
+            >查看流程图</a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="linkeytable" data-sort="sortDisabled">
+        <tbody>
+        <tr class="firstRow">
+            <td valign="middle" style="-ms-word-break: break-all;" rowspan="1" colspan="1" class="texttd">事务标题</td>
+            <td valign="middle" rowspan="1" colspan="3"><span id="subject">学生请假流程_庄紫雯_<span id="time5"></span></span></td>
+        </tr>
+        <tr>
+            <td width="245" valign="middle" style="-ms-word-break: break-all;" class="texttd">姓名<span
+                    id="_baidu_bookmark_start_1" style="line-height: 0px; display: none;">‍</span></td>
+            <td width="245" valign="middle" style="-ms-word-break: break-all;"><span id="XM">庄紫雯</span></td>
+            <td width="245" valign="middle" style="-ms-word-break: break-all;" class="texttd">电话<br></td>
+            <td width="245" valign="middle" style="-ms-word-break: break-all;"><span id="DH">13115454412</span></td>
+        </tr>
+        <tr>
+            <td width="245" valign="middle" style="-ms-word-break: break-all;" class="texttd">专业班级</td>
+            <td width="245" valign="middle" style="-ms-word-break: break-all;"><span id="ZYBJ">20小学教育1</span></td>
+            <td width="245" valign="middle" style="-ms-word-break: break-all;" class="texttd">年级</td>
+            <td width="245" valign="middle" style="-ms-word-break: break-all;"><span id="NJ">2020</span></td>
+        </tr>
+        <tr>
+            <td valign="middle" style="-ms-word-break: break-all;" rowspan="1" colspan="1" class="texttd">请假类型</td>
+            <td valign="middle" style="-ms-word-break: break-all;" rowspan="1" colspan="3"><input disabled=""
+                                                                                                  name="QJLX" id="QJLX1"
+                                                                                                  type="radio"
+                                                                                                  checked="" value="1">事假<input
+                    disabled="" name="QJLX" id="QJLX2" type="radio" value="2">病假<input disabled="" name="QJLX"
+                                                                                       id="QJLX3"
+                                                                                       type="radio" value="3">公假
+            </td>
+        </tr>
+        <tr>
+            <td valign="middle" style="-ms-word-break: break-all;" rowspan="1" colspan="1" class="texttd">请假原因</td>
+            <td valign="middle" rowspan="1" colspan="3"><span id="QJYY">去商业街拿快递</span></td>
+        </tr>
+        <tr>
+            <td valign="middle" style="-ms-word-break: break-all;" rowspan="1" colspan="1" class="texttd">请假时间</td>
+            <td valign="middle" style="-ms-word-break: break-all;" rowspan="1" colspan="3"><span
+                    id="time2"></span>&nbsp;一&nbsp;<span id="time3"></span>共计<span
+                    id="QJTSSL">0.5</span>天<span id="SFTY" style="display:none"></span></td>
+        </tr>
+        <tr>
+            <td width="245" valign="middle" style="-ms-word-break: break-all;" class="texttd"><span
+                    style="font-size: 12px;"><span style="font-size: 12px;">前往地点</span></span></td>
+            <td width="245" valign="middle" style="-ms-word-break: break-all;"><span id="QWDD">商业街</span></td>
+            <td width="245" valign="middle" style="-ms-word-break: break-all;" class="texttd">&nbsp;<span
+                    style="font-size: 12px;">家长手机号码</span></td>
+            <td width="245" valign="middle" style="-ms-word-break: break-all;"><span id="JZSJHM">13712312124</span></td>
+        </tr>
+        <tr>
+            <td valign="middle" style="-ms-word-break: break-all;" rowspan="1" colspan="1" class="texttd">注意事项</td>
+            <td valign="middle" style="-ms-word-break: break-all;" rowspan="1" colspan="3"><p>
+                1、请假七天以内的，由辅导员审批；请假七天以上一个月以内的，经辅导员同意后报学院副书记审批；请假一个月以上两个月以内的，辅导员报学院研究决定，由二级学院院长审批，并报学生工作处备案。</p>
+                <p>2.、学生要提高安全防范意识，在请假期间所发生的一切意外事故由学生本人负责<br></p></td>
+        </tr>
+        <tr>
+            <td width="245" valign="middle" style="-ms-word-break: break-all;" class="texttd">附件上传<span
+                    id="_baidu_bookmark_start_0" style="line-height: 0px; display: none;">‍</span></td>
+            <td valign="middle" rowspan="1" colspan="3">
+                <div id="file1" class="attachmentlist" readtype="true">
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td width="245" valign="middle" style="-ms-word-break: break-all;" class="texttd">审批意见</td>
+            <td valign="middle" rowspan="1" colspan="3"><span class="ue_t" id="SPYJ" name="SPYJ" type="remark"
+                                                              remarktype="ALL"><div
+                    style="padding-left:8px;color:#0066cc">同意! </div><div align="right" style="padding-right:30px;">辅导员审批  <font
+                    color="#339900">骆小婷/教职工/教学部门/老隆师范学院</font> <font color="#999999" id="time4"></font></div><hr
+                    style="border: 1px dashed #cccccc; width: 98%; height: 1px;" align="left"></span></td>
+        </tr>
+        </tbody>
+    </table>
+    <p><br></p>
+    <!-- SUBFORM Begin-->
+    <listsubform>
+
+    </listsubform>
+    <!-- SUBFORM End-->
+
+    <!-- BottomForm Begin-->
+    <div align="right" class="ApprovalBottom" id="BottomToolbar"><img src="./jiatiao/vwicn179.gif" align="absmiddle">
+        <a href="https://ehall.hypt.edu.cn/bpm/rule?wf_num=R_S003_B062&amp;wf_docunid=b13d2fb304502043cd09364002be5705bd35#"
+           onclick="AddToFavorites();return false;">关注</a>
+        <a href="https://ehall.hypt.edu.cn/bpm/rule?wf_num=R_S003_B062&amp;wf_docunid=b13d2fb304502043cd09364002be5705bd35#"
+           onclick="PrintForm();return false;">打印</a>
+        <a href="https://ehall.hypt.edu.cn/bpm/rule?wf_num=R_S003_B062&amp;wf_docunid=b13d2fb304502043cd09364002be5705bd35#"
+           onclick="WF_OpenAttachmentLog();return false;">附件日记</a></div>
+    <!-- BottomForm End-->
+
+    <!-- Workflow Field Begin-->
+    <div style="display:none">
+        <div id="win"></div>
+        <input name="WF_DocUnid" id="WF_DocUnid" value="b13d2fb304502043cd09364002be5705bd35">
+        <input name="transactiontypeid" id="transactiontypeid" value="">
+        <input name="transactionid" id="transactionid" value="">
+        <input name="WF_Processid" id="WF_Processid" value="07a9e047094a60441e0b2920424c1db34fd2">
+        <input id="WF_ProcessNumber" value="">
+        <input id="WF_UserName" value="2020120220">
+        <input id="WF_ProcessName" value="河源职业技术学院学生请假流程">
+        <input name="WF_NextNodeid" id="WF_NextNodeid" value=""><!--要提交的目的节点-->
+        <input name="WF_NextUserList" id="WF_NextUserList" value=""><!--要提交的目的用户-->
+        <input name="WF_SubNextUserList" id="WF_SubNextUserList" value=""><!--要提交的子流程的目标用户-->
+        <input name="WF_Appid" id="WF_Appid" value="S029">
+        <input id="WF_CurrentNodeid" value=""><!-- 当前用户所处节点id,空表示无权-->
+        <input id="WF_CurrentNodeName" value="">
+        <input id="WF_NewDocFlag" name="WF_NewDocFlag" value="false"><!-- true表示新文档-->
+        <input id="WF_IsFirstNodeFlag" value="false"><!-- true表示是首环节-->
+        <input id="WF_NodeProperty" value=""><!-- 在环节中标识的自定义节点参数-->
+        <input id="WF_DocStatus" value="ARC" disabled="">
+        <input name="WF_Remark" id="WF_Remark" value="">
+    </div><!-- Workflow Field End-->
+</form>
+
+<div class="pobmodal-overlay">
+    <div id="pobmodal-dialog"><h2>提示</h2>当前文档正处于打开状态，请点击<a style="color:red;" href="javascript:POBrowser.resumePO();">
+        这里 </a>切换PageOffice窗口继续查看或编辑文档。
+        <div class="button-holder"><br><br><a class="button blue" href="javascript:POBrowser.resumePO();"> 立即切换
+            PageOffice 窗口</a></div>
+    </div>
+</div>
+<div id="bar_v4" style="top: 0px;">
+    <div class="topbar">
+        <div class="leftbar"><a
+                href="https://ehall.hypt.edu.cn/bpm/rule?wf_num=R_S003_B062&amp;wf_docunid=b13d2fb304502043cd09364002be5705bd35"
+                class="flowmap"
+        >查看流程图</a><a
+                href="https://ehall.hypt.edu.cn/bpm/rule?wf_num=R_S003_B062&amp;wf_docunid=b13d2fb304502043cd09364002be5705bd35"
+                class="flowhistroy"
+        >查看流转记录</a>
+        </div>
+        <div class="rightbar"><a
+                href="https://ehall.hypt.edu.cn/bpm/rule?wf_num=R_S003_B062&amp;wf_docunid=b13d2fb304502043cd09364002be5705bd35"
+                onclick="window.close();return false;">关闭</a><span></span></div>
+    </div>
+</div>
+<table width="100%" height="37px">
+    <tbody>
+    <tr>
+        <td></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
+<script>
+    var show = function () {
+        var date = new Date();
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        month = month < 10 ? "0" + month : month;
+        var day = date.getDate();//获取日期
+        day = day < 10 ? "0" + day : day;
+
+        result2 = year + "-" + month + "-" + day;
+        document.getElementById("time2").innerHTML = result2;
+        document.getElementById("time3").innerHTML = result2;
+
+        result4 = year + month + day;
+        document.getElementById("time5").innerHTML = result4;
+
+        day = day - 1;
+        day = day < 10 ? "0" + day : day;
+        result=year+"-"+month+"-"+day+" "+"16"+":"+"00";
+        document.getElementById("time").innerHTML = result;
+
+        result3=year+"-"+month+"-"+day+" "+"16"+":"+"14";
+        document.getElementById("time4").innerHTML = result3;
+
+    }
+
+    show();
+
+</script>
