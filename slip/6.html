@@ -3,7 +3,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>学生请假流程_庄紫雯_20220908</title>
+    <title id="title"></title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./jiatiao/easyui.css">
     <link rel="stylesheet" type="text/css" href="./jiatiao/icon.css">
@@ -261,6 +261,9 @@
 
         result3 = year + "-" + month + "-" + day + " " + "16" + ":" + "14";
         document.getElementById("time4").innerHTML = result3;
+
+        res = "学生请假流程_庄紫雯_"+result4;
+        document.getElementById("title").innerHTML = res;
 
     }
 

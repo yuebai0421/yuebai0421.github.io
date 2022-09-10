@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>新冠肺炎疫情防控期间学生外出审批_蔡向健_20220827</title>
+    <title id="title"></title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="./jiatiao/easyui.css">
@@ -206,6 +206,10 @@
 
         result = year + "-" + month + "-" + day + " " + "22" + ":" + "00";
         document.getElementById("JSSJ").innerHTML = result;
+        result4 = year + month + day;
+        res = "新冠肺炎疫情防控期间学生外出审批_蔡向健_"+result4;
+        document.getElementById("title").innerHTML = res;
+
     }
     var show4 = function () {
         var year = date.getFullYear();
