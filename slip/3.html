@@ -1,459 +1,462 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,viewport-fit=cover">
+    <link rel="icon" href="./favicon.ico">
     <title>请假详情</title>
-    <script src="https://hm.baidu.com/hm.js?9c84ad81d0e6c11abcad2727a44dda5a"></script>
-    <script type="text/javascript" src="./jiatiao/jquery.min.js"></script>
-    <script>
-        var _hmt = _hmt || [];
-        (function () {
-            var hm = document.createElement("script");
-            hm.src = "https://hm.baidu.com/hm.js?9c84ad81d0e6c11abcad2727a44dda5a";
-            var s = document.getElementsByTagName("script")[0];
-            s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
-    <style>
-        body {
-            background: rgb(245, 245, 245);
-        }
+    <link href="./css/page-home.2d389ded.css" rel="prefetch">
+    
+    <link href="./css/chunk-common.209299d0.css" rel="preload" as="style">
+    <link href="./css/chunk-vendors.8c468b3e.css" rel="preload" as="style">
+    <link href="./css/home.d6d81581.css" rel="preload" as="style">
+    
+    <link href="./css/chunk-vendors.8c468b3e.css" rel="stylesheet">
+    <link href="./css/chunk-common.209299d0.css" rel="stylesheet">
+    <link href="./css/home.d6d81581.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1921143_afl404vl6g.css">
+    <script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="./css/page-home.2d389ded.css">
+     <script charset="utf-8" src="./js/jquery.min.js"></script>
 
-        * {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        #menu {
-            display: flex;
-            background: #fff;
-        }
-
-        #menu li {
-            width: 50%;
-            display: flex;
-            justify-content: center;
-            text-align: center;
-        }
-
-        #menu li span {
-            display: block;
-            height: 45px;
-            line-height: 45px;
-            width: 100px;
-            box-sizing: border-box;
-        }
-
-        #menu li:first-child span {
-            color: rgb(17, 156, 248);
-            border-bottom: 3px solid rgb(17, 156, 248);
-        }
-
-        #banner {
-            height: 125px;
-            width: 100%;
-            overflow: hidden;
-            /* background: rgb(6, 212, 240); */
-        }
-
-        #banner .top {
-            height: 20px;
-            background: orange;
-            display: flex;
-            justify-content: center;
-        }
-
-        #banner .top p {
-            line-height: 20px;
-            color: #fff;
-            font-size: 13px;
-            letter-spacing: 1px;
-        }
-
-        #banner .top span {
-            display: inline-block;
-            background: #fff;
-            width: 15px;
-            height: 15px;
-            font-size: 15px;
-            line-height: 15px;
-            border-radius: 100%;
-            color: #ccc;
-            text-align: center;
-            font-weight: bold;
-        }
-
-        @keyframes scrollToUp {
-            0% {
-                background-position: 0 0;
-            }
-            100% {
-                background-position: -371% 0;
-            }
-        }
-
-        #banner .bottom {
-            height: 150px;
-            width: 100%;
-            background-image: url('http://wzjlovewxf.cn/files/banner.png');
-            background-repeat: repeat-x;
-            background-size: 130% 180px;
-            margin-bottom: 0px;
-            background-attachment: fixed;
-            background-position: center center;
-            animation: scrollToUp 7s linear infinite;
-            color: #fff;
-            position: relative;
-        }
-
-        #banner .bottom .yes img {
-            display: inline-block;
-            width: 20px;
-            height: 20px;
-
-        }
-
-        #banner .bottom .yes {
-            font-size: 17px;
-            height: 29px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            letter-spacing: 3px;
-        }
-
-        #banner .bottom .jia {
-            font-size: 34px;
-            text-align: center;
-            letter-spacing: 5px;
-        }
-
-        #banner .bottom span {
-            position: absolute;
-            top: 10px;
-            right: 20px;
-        }
-
-        .clock {
-            font-size: 12px;
-            display: flex;
-            margin-top: 7px;
-            justify-content: center;
-
-
-        }
-
-        .clock #clock {
-            display: block;
-            width: 180px;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 1px;
-            text-align: center;
-            border-radius: 10px;
-        }
-
-        #header, #content, #tab {
-            padding: 6px 22px;
-            box-sizing: border-box;
-            width: 100%;
-            line-height: 25px;
-            background: #fff;
-            font-size: 13px;
-            margin-bottom: 18px;
-        }
-
-        #content > p, #tab > p {
-            font-size: 16px;
-            width: 100%;
-            height: 40px;
-            line-height: 40px;
-            display: block;
-        }
-
-        .t {
-            width: 100%;
-            display: flex;
-        }
-
-        .t div {
-            width: 50%;
-        }
-
-        .l {
-            color: rgb(158, 158, 158);
-        }
-
-        .c {
-            color: rgb(32, 136, 255);
-        }
-
-        .orange {
-            color: orange;
-        }
-
-        .time {
-            display: flex;
-            position: relative;
-        }
-
-        .time .right {
-            width: 100px;
-            height: 35px;
-            background: rgba(220, 244, 255, 0.74);
-            border: 1px solid rgba(32, 136, 255, 0.616);
-            border-radius: 5px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: rgba(32, 136, 255, 0.788);
-            font-weight: bold;
-            font-size: 14px;
-            position: absolute;
-            right: 0;
-        }
-
-        .another .why {
-            width: 100%;
-        }
-
-        .another .why .l {
-            display: inline-block;
-            width: 75px;
-        }
-
-        .another .why .r {
-            display: inline-block;
-            width: 280px;
-            vertical-align: text-top;
-            line-height: normal;
-        }
-
-        .block span {
-            height: 25px;
-        }
-
-        .block .zero {
-            display: inline-block;
-            width: 18px;
-            height: 18px;
-            border: 1px solid rgb(32, 136, 255);
-            border-radius: 100%;
-
-        }
-
-        .block .zero2 {
-            border: 1px solid rgb(36, 201, 58);
-        }
-
-        .block, .process {
-            position: relative;
-        }
-
-        .center {
-            position: absolute;
-            top: -3px;
-            left: 28px;
-        }
-
-        .b {
-            position: absolute;
-            top: 20px;
-            left: 9px;
-            height: 9px;
-            width: 1px;
-            background: #ccc;
-        }
-
-        .theTime {
-            float: right;
-        }
-
-        .d {
-            width: 20px;
-            text-align: center;
-            color: rgb(158, 158, 158);
-        }
-
-        /* 审批意见 */
-        .opinion {
-            width: calc(100% - 30px);
-            border: 1px solid rgb(228, 227, 227);
-            border-radius: 4px;
-            background: rgb(250, 250, 250);
-            margin-left: 30px;
-            color: rgb(184, 180, 180);
-            box-sizing: border-box;
-            padding-left: 10px;
-        }
-
-        #tab {
-            margin-bottom: 50px;
-            padding-bottom: 20px;
-        }
-
-        .flex {
-            position: fixed;
-            bottom: 1px;
-            background: #fff;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 50px;
-            border: 1px solid rgba(233, 232, 232, 0.815);
-        }
-
-        .flex div {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-        }
-
-        .flex div:first-child {
-            border-right: 1px solid rgba(233, 232, 232, 0.815);
-        }
-
-        .flex div:last-child {
-            background: rgba(32, 136, 255);
-            color: #fff;
-        }
-    </style>
 </head>
-
-
-<body>
-<ul id="menu">
-    <li>
-        <span>请假信息</span>
-    </li>
-    <li>
-        <span>核验二维码</span>
-    </li>
-</ul>
-<div id="banner">
-
-    <div class="top">
-        <p><span>?</span>如何销假？</p>
-    </div>
-    <div class="bottom">
-        <span>个人信息 &gt;</span>
-        <div class="yes">
-            <img src="http://wzjlovewxf.cn/files/yes.png" alt="">
-            审批已通过
+<body class="">
+<noscript><strong>We're sorry but 请假 doesn't work properly without JavaScript enabled. Please enable
+    it to continue.</strong></noscript>
+<div id="app">
+    <!---->
+    <div class="page-detail flex-col h-screen ios-touch-scroll relative">
+        <div class="flex-1 van-tabs van-tabs--line">
+            <div class="van-tabs__wrap van-hairline--top-bottom">
+                <div role="tablist" class="van-tabs__nav van-tabs__nav--line">
+                    <div role="tab" aria-selected="true" class="van-tab van-tab--active" id="a1" onclick="click2()"><span
+                            class="van-tab__text van-tab__text--ellipsis ">请假信息</span></div>
+                    <div role="tab"  class="van-tab" onclick="click1()"><span
+                            class="van-tab__text van-tab__text--ellipsis" >核验二维码</span></div>
+                    <div class="van-tabs__line" id="clazz"
+                         style="width: 80px; transform: translateX(100px) translateX(-50%);"></div>
+                </div>
+            </div>
+            <div class="van-tabs__content" >
+                <div role="tabpanel" class="van-tab__pane" style="" id="s5">
+                    <div class="flex-col h-screen flex-1 overflow-hidden" >
+                        <div class="flex-1  overflow-y-auto"><span>
+										<div class="cat-tip flex-center font-white font-12 bg-warning"><i
+                                                class="tip-icon cat-icon iconfont iconquestion"
+                                                style="font-size: 3.73333vw;"></i>
+											<div class="text-trunc"> 如何销假？ </div>
+										</div>
+									</span>
+                            <div>
+                                <div class="cat-status-flag no-shrink" info="[object Object]">
+                                    <div class="flag-dom relative flag-success"><span
+                                            onclick="open1()"
+                                            class="personal-info absolute">个人信息 &gt;</span>
+                                        <div class="flag-text">
+                                            <div class="status-svg-text"><i class="cat-icon iconfont iconsure2"
+                                                                            style="font-size: 5.33333vw; color: rgb(255, 255, 255);"></i><span>审批已通过</span>
+                                            </div>
+                                            <div class="status-text-bold"> 正在休假中</div>
+                                        </div>
+                                        <div class="dynamic-strip no-shrink">
+                                            <!---->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-detail-info" flag="6" now-time-text="当前时间:2022-09-18 11:25:03" id="s3"
+                                 student-info="[object Object]">
+                                <div
+                                        class="cat-flow-leave-meta hairline-b py-10 font-12 bg-white px-20 no-shrink">
+                                    <div class="flex">
+                                        <div class="flex mb-5 flex-1">
+                                            <div class="font-light no-shrink row-label"> 请假类型：</div>
+                                            <div class="font-normal flex-1 mr-5"> 事假</div>
+                                        </div>
+                                        <div class="flex mb-5 flex-1">
+                                            <div class="font-light no-shrink row-label"> 需要离校：</div>
+                                            <div class="flex-1 mr-5"><span class="font-normal">离校</span></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex mb-5">
+                                        <div class="font-light no-shrink row-label"> 销假规则：</div>
+                                        <div class="font-normal flex-1 mr-5"><span
+                                                class="font-warning">离校请假需要销假，非离校请假无需销假</span><span
+                                                class="font-primary ml-5">查看 &gt;</span></div>
+                                    </div>
+                                    <div class="flex">
+                                        <div class="font-light no-shrink"> 实际休假时间：</div>
+                                        <div class="font-normal flex-1 mr-5"><span>-</span></div>
+                                    </div>
+                                </div>
+                                <span>
+											<div
+                                                    class="cat-leave-detail hairline-b hairline-t px-20 bg-white py-10 my-10">
+												<!---->
+												<div class="font-dark font-14 mb-10"> 我的 请假申请 </div>
+                                                <!---->
+												<div class="flex mb-5 font-12 ai-center relative">
+													<div
+                                                            class="totalDays pin-t pin-r absolute font-14 bold px-10 py-5 font-primary radius-small">
+														5小时13分 </div>
+													<div class="font-light no-shrink row-label"> 开始时间： </div>
+													<div class="font-normal flex-1 ml-5 bold" id="time1">  </div>
+												</div>
+												<div class="flex mb-5 font-12 ai-center">
+													<div class="font-light no-shrink row-label"> 结束时间： </div>
+													<div class="font-normal flex-1 ml-5 bold" id="time2">  </div>
+												</div>
+												<div class="flex mb-5 font-12 ai-center">
+													<div class="font-light no-shrink row-label"> 审批流程： </div>
+													<div class="font-normal flex-1 ml-5"> 共1步 <span
+                                                            class="font-primary">查看&gt;</span></div>
+												</div>
+												<div class="flex mb-5 font-12 ai-center">
+													<div class="font-light no-shrink row-label"> 紧急联系人： </div>
+													<div class="font-normal flex-1 ml-5"> 13119831241 </div>
+												</div>
+                                                <!---->
+												<div class="flex mb-5 font-12 ai-start mb-5">
+													<div class="font-light no-shrink row-label"> 请假原因： </div>
+													<div class="font-normal flex-1 ml-5 break-all">
+														出去商业街拿快递和买生活用品 </div>
+												</div>
+												<div class="flex mb-5 font-12 ai-center">
+													<div class="font-light no-shrink row-label"> 发起位置： </div>
+													<div class="font-normal flex-1 ml-5"><span href="javascript:void(0)"
+                                                                                               class="location"
+                                                                                               style="color: rgb(51, 153, 255); cursor: pointer;">广东省河源市源城区书香路</span>
+													</div>
+												</div>
+												<div class="flex mb-5 font-12 ai-center">
+													<div class="font-light no-shrink row-label" style="width: 16vw;">
+														抄送人： </div>
+													<div class="font-normal flex-1 ml-5"><span class="location">无</span>
+													</div>
+												</div>
+												<div class="flex mb-5 font-12 ai-start">
+													<div class="font-light no-shrink row-label" style="width: 16vw;">
+														目的地： </div>
+													<div class="font-normal flex-1 ml-5 break-all">
+														广东省/河源市/源城区/商业街 </div>
+												</div>
+												<div class="flex mb-5 font-12 ai-start">
+													<div class="font-light no-shrink row-label"> 宿舍信息： </div>
+													<div class="font-normal flex-1 ml-5 break-all"> - </div>
+												</div>
+                                                <!---->
+                                                <!---->
+												<div
+                                                        class="flex mb-5 font-12 ai-center font-warning text-justify break-all">
+													本人承诺填写的信息真实有效，并对本次提交请假申请的信息真实性负责。 </div>
+											</div>
+											<div class="py-10 font-12 bg-white px-20 my-10 hairline-t hairline-b"><span
+                                                    class="font-14 font-dark">审批流程记录</span>
+												<div class="cat-audit-list mt-10">
+													<div class="comp-flow relative">
+														<div class="line absolute z-index-0"></div>
+														<div class="flow-title flex jc-between ai-start relative">
+															<div class="flex ai-center"><i
+                                                                    class="mr-5 no-shrink bg-white z-index-1 absolute pin-l pin-t cat-icon iconfont iconround font-primary"
+                                                                    style="font-size: 5.33333vw; top: -0.53333vw;"></i><span
+                                                                    class="ml-20 mr-5" style="margin-left: 8vw;">蔡向健 -
+																	发起申请</span></div>
+															<div class="font-light ai-center no-shrink"
+                                                                 style="margin-top: 0.53333vw;"><span id="time3"></span>
+															</div>
+														</div>
+														<div class="flow-content py-10">
+															<!---->
+														</div>
+													</div>
+													<div class="comp-flow relative">
+														<!---->
+														<div class="flow-title flex jc-between ai-start relative">
+															<div class="flex ai-center"><i
+                                                                    class="mr-5 no-shrink bg-white z-index-1 absolute pin-l pin-t cat-icon iconfont iconround font-success"
+                                                                    style="font-size: 5.33333vw; top: -0.53333vw;"></i><span
+                                                                    class="ml-20 mr-5" style="margin-left: 8vw;">一级：谢素青 -
+																	审批<span
+                                                                        style="color:#00ca75;">通过</span></span>
+															</div>
+															<div class="font-light ai-center no-shrink"
+                                                                 style="margin-top: 0.53333vw;"><span id="time4"></span>
+															</div>
+														</div>
+														<div class="flow-content py-10 pb-10">
+															<div
+                                                                    class="option-tip p-5 radius-small bg-grey border-normal">
+																<div data-v-7622a762=""
+                                                                     class="cat-approve-opinion font-light font-12 relative close"
+                                                                     style="-webkit-box-orient: vertical;">
+																	审批意见：无
+                                                                    <!---->
+                                                                    <!---->
+                                                                    <!---->
+																</div>
+                                                                <!---->
+                                                                <!---->
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</span>
+                                <!---->
+                                <!---->
+                                <!---->
+                            </div>
+                            
+                        </div>
+                        <span class="no-shrink">
+									<div class="btn-area flex jc-between no-shrink">
+										<!---->
+										<div class="cat-button flex-1 flex-center radius- false false btn-hairline-t"
+                                             style="font-size: 4.26667vw; background: rgb(255, 255, 255); height: 11.7333vw; width: auto;">
+											<!---->
+											<div class="flex-center"> 转发 </div>
+                                            <!---->
+										</div>
+                                        <!---->
+										<div class="cat-button flex-1 flex-center radius- false false btn-hairline-l btn-hairline-t"
+                                             style="font-size: 4.26667vw; background: rgb(255, 255, 255); height: 11.7333vw; width: auto;">
+											<!---->
+											<div class="flex-center"> 申请续假 </div>
+                                            <!---->
+										</div>
+										<div class="cat-button flex-1 flex-center radius- false false"
+                                             style="color: rgb(255, 255, 255); font-size: 4.26667vw; background: rgb(51, 153, 255); height: 11.7333vw; width: auto;">
+											<!---->
+											<div class="flex-center"> 去销假 </div>
+                                            <!---->
+										</div>
+                                        <!---->
+									</div>
+                            <!---->
+                            <!---->
+									<div class="cat-share-popup">
+										<div class="flex-col van-overlay" style="display: none;">
+											<div class="flex jc-end"><i
+                                                    class="forward mr-20 cat-icon iconfont iconforward"
+                                                    style="font-size: 16vw; color: rgb(255, 255, 255); display: inline-block; transform: rotate(-30deg);"></i>
+											</div>
+											<div class="forward-text text-center font-white mr-20 mt-10">
+												点击右上角发送给朋友
+											</div>
+										</div>
+									</div>
+                            <!---->
+								</span>
+                    </div>
+                </div>
+                <div role="tabpanel" class="van-tab__pane" id="s4" style="display:none;">
+                    <div class="flex-col h-screen flex-1 overflow-hidden">
+                        <div class="flex-1 ">
+                            <div class="cat-title w-full flex ai-center font-dark bg-warning tip px-20 text-center"
+                                 style="font-size: 3.2vw; z-index: 2;">
+                                <div class="text-trunc flex-1 overflow-hidden">
+                                    请出示专属核验二维码，用于验证请假单真伪
+                                </div><!----></div>
+                            <div>
+                                <div class="cat-status-flag no-shrink" info="[object Object]">
+                                    <div class="flag-dom relative flag-success" onclick="open1()"><span
+                                            class="personal-info absolute">个人信息 &gt;</span>
+                                        <div class="flag-text">
+                                            <div class="status-svg-text"><i class="cat-icon iconfont iconsure2"
+                                                                            style="font-size: 5.33333vw; color: rgb(255, 255, 255);"></i><span>审批已通过</span>
+                                            </div>
+                                            <div class="status-text-bold"> 正在休假中</div>
+                                        </div>
+                                        <div class="dynamic-strip no-shrink"><!----></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="page-detail-code">
+                                <div>
+                                    <div class="detail-code flex-col ai-center mt-20"><!---->
+                                        <div class="flex ai-center">
+                                            <div class="flex ai-center flex-col">
+                                                <div class="code-wrap bg-white p-10 radius-normal"><img
+                                                        id="72a75889-9088-4dc2-a69f-9655ea723304" color-dark="#000"
+                                                        color-light="#fff" size="160" margin="0"
+                                                        text="61c3bea7fb0c490db7fac8324cbd1bf7&amp;1"
+                                                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAACgCAYAAACLz2ctAAAAAXNSR0IArs4c6QAAFftJREFUeF7tXXeMlUUQ37NgIwoKthMbKEGwd5ESEQUrllPAeChR7MaKWAJYEKMR9UBFNMYSLFiQqGDDoIIoovFARLGhUVEBe0UF87vvXdxvdva9na+8O+5mkvvn3e5++837vd2dnZnfVBhjVplGKNXV1eb+++9PNbMdd9zRfPTRR7ExDj/8cPPMM8844+66665m3rx5qZ7HdZ4+fbo56KCDEo+L+eM9qEyaNMlUVVUFjTto0CDzwAMPBLUtd6MKBWCkcgVguaEXPU8BWNC7AlABGNOAbsGROnQLbpgfhlEANmMAdu3a1fTs2bNs0BszZoz5448/glbAmpoa88svv8TadurUyRx77LHOfCVGyNixY823334bG2Px4sVm4sSJqfQwePBgs/322yceY9WqVebPP/90+vfv39906dIlaFzOCFlvvfXMRRddFNQ/i0YzZswws2bNcoZiz4BXXnmlue6667J4btAYm2yyifn++++DALjVVluZr776KtYW1iCsQioSAHITffnll02vXr2C3iGvRjvssINZtGhRquE5AG688cZm+fLlqcaVdL7qqqvMqFGjFIC+axgFoARO8rYKwILOFICRInQFtH5EugX7VxTdguWrrbiHAlABGNOAzwipqIDNklzOPPNMc+eddzoDSACY/OnFe0ouomfPnm3222+/2IBvvPGG2X///Z2HpHXFZfG+EiPkrLPOMuPHj0/1WFjuVDI5AyoAI7UqAIvjUwGY4PerK2CkNF0BC+DJwhMiwaECUAEYw4sCUPLzKd5Wz4AF/WRhhEyYMMH8+uuvib8duMX69evn9OdWwHbt2rExd23btjUtWrSIjfH5558buAmpcEbIsmXLconPa9mypRkyZIgzBwVghgDkXHESNEoCUhFICgBRgbULqzdEOAAi8BWAz1oqKyvNl19+qQD0KTaLFVAB6IetArDET1oBGClIV8D/gSKKhmkM94C6AuoKmPjooiugroAUPKvdCvjXX38ZetP+5JNPmpNOOsn5YcyfP9906NAh9vkaa6zhWLBowI3ra7tixQqzcuXK2Lhz5swxPXr0cOYAaxnj2NK5c2czc+bMoB/yxx9/bHbeeWenLQJlaRAudqh11llHjZA8jRBu7Mce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"
+                                                        style="display: inline-block;"></div>
+                                                <div class="font-12 text-light mt-10 text-normal" style="white-space: nowrap;">
+                                                    请使用辅导猫扫码核验请假单真伪
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="now-time-tip mt-20 bg-primary font-white px-15 font-16 font-bold"
+                                             style="height: 8.53333vw !important; border-radius: 4.26667vw !important; padding-top: 0px !important;">
+                                            <span id="clock"></span>
+                                        </div>
+                                    </div>
+                                </div>
+               
+                            </div>
+                        </div><!----></div>
+                </div>
+            </div>
+    
+           
+            
         </div>
-        <div class="jia">
-            正在休假中
+        
+        
+        
+        <div class="cat-personal-modal flex-center flex-1 h-screen w-screen h-screen absolute pin-l pin-t" id="s2"
+             style="display: none;">
+            <div class="personal-info-box px-15 py-15 radius-normal overflow-hidden">
+                <div class="info-box-title font-16 font-normal text-center pb-15 relative"><span
+                        class="font-bold">个人信息</span><i class="absolute close-icon cat-icon iconfont iconclose1"
+                                                        onclick="cancel()"
+                                                        style="font-size: 4.8vw; color: rgb(101, 113, 128);"></i></div>
+                <div class="info-box-content overflow-y-auto">
+                    <div class="row-wrap">
+                        <div class="box-content-row font-14 font-normal font-bold flex mb-10 ai-start">
+                            <div class="content-row-label mr-5 no-shrink"> • 照片：</div>
+                            <div class="content-row-value flex-1"> -</div>
+                        </div>
+                        <div class="box-content-row font-14 font-normal font-bold flex mb-10 ai-start">
+                            <div class="content-row-label mr-5 no-shrink"> • 姓名：</div>
+                            <div class="content-row-value flex-1"> 蔡向健</div>
+                        </div>
+                        <div class="box-content-row font-14 font-normal font-bold flex mb-10 ai-start">
+                            <div class="content-row-label mr-5 no-shrink"> • 学号：</div>
+                            <div class="content-row-value flex-1"> 2020120220</div>
+                        </div>
+                        <div class="box-content-row font-14 font-normal font-bold flex mb-10 ai-start">
+                            <div class="content-row-label mr-5 no-shrink"> • 性别：</div>
+                            <div class="content-row-value flex-1"> 男</div>
+                        </div>
+                        <div class="box-content-row font-14 font-normal font-bold flex mb-10 ai-start">
+                            <div class="content-row-label mr-5 no-shrink"> • 年级：</div>
+                            <div class="content-row-value flex-1"> 2020</div>
+                        </div>
+                        <div class="box-content-row font-14 font-normal font-bold flex mb-10 ai-start">
+                            <div class="content-row-label mr-5 no-shrink"> • 学院：</div>
+                            <div class="content-row-value flex-1"> 电子与信息工程学院</div>
+                        </div>
+                        <div class="box-content-row font-14 font-normal font-bold flex mb-10 ai-start">
+                            <div class="content-row-label mr-5 no-shrink"> • 专业：</div>
+                            <div class="content-row-value flex-1"> 软件技术</div>
+                        </div>
+                        <div class="box-content-row font-14 font-normal font-bold flex mb-10 ai-start">
+                            <div class="content-row-label mr-5 no-shrink"> • 班级：</div>
+                            <div class="content-row-value flex-1"> 20软件技术2</div>
+                        </div>
+                        <div class="box-content-row font-14 font-normal font-bold flex mb-10 ai-start">
+                            <div class="content-row-label mr-5 no-shrink"> • 宿舍：</div>
+                            <div class="content-row-value flex-1"> -</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="clock">
-            <div id="clock"></div>
-        </div>
-
+        
     </div>
 </div>
-<div id="header">
-    <div class="t">
-        <div>
-            <span class="l">请假类型：</span><span class="r">事假</span>
-        </div>
-        <div>
-            <span class="l">需要离校：</span><span class="r orange">离校</span>
-        </div>
+<script src="https://gosspublic.alicdn.com/aliyun-oss-sdk-5.0.1.min.js"></script>
+<script src="https://feres.cpdaily.com/bower_components/baidumap/baidujsSdk@2.js"></script>
+<script type="text/javascript"
+        src="https://api.map.baidu.com/getscript?v=2.0&amp;ak=ZxQ1WQz82jvbZPlrPr0KIRaATq6CEQU0&amp;services=&amp;t=20200327103013">
+</script>
+<script src="https://feres.cpdaily.com/bower_components/areaData/area.js"></script>
+<script
+        src="https://api.map.baidu.com/api?v=3.0&amp;ak=ZxQ1WQz82jvbZPlrPr0KIRaATq6CEQU0&amp;services=&amp;t=20180112120004&amp;s=1">
+</script>
+<script type="text/javascript"
+        src="https://api.map.baidu.com/getscript?v=3.0&amp;ak=ZxQ1WQz82jvbZPlrPr0KIRaATq6CEQU0&amp;services=&amp;t=20220829195059">
+</script>
+
+<div class="van-toast van-toast--middle van-toast--loading" style="z-index: 2004; display: none;">
+    <div class="van-loading van-loading--spinner van-toast__loading"><span
+            class="van-loading__spinner van-loading__spinner--spinner"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
     </div>
-    <div><span class="l">销假规则：</span><span class="r orange">离校请假需要销假，非离校请假无需销假 <span class="c">查看 &gt;</span></span>
-    </div>
-    <div><span class="l">实际休假时间：</span><span class="r">-</span></div>
+    <div class="van-toast__text">加载中...</div>
 </div>
-<div id="content">
-    <p>我的 请假申请</p>
-    <div class="time">
-        <div class="left">
-            <p><span class="l">开始时间：</span><span  class="r" ><b id="time1" style="color: #939393; "></b></span></p>
-            <p><span class="l">结束时间：</span><span  class="r"><b id="time2" style="color: #939393; "></b ></span></p>
-        </div>
-        <div class="right">
-            4小时1分钟
-        </div>
-    </div>
-    <div class="another">
-        <p><span class="l">审批流程：</span><span class="r">共1步 <span class="c">查看&gt;</span></span></p>
-        <p><span class="l">紧急联系人：</span><span class="r" style="color: #6e6e6e">13119831241</span></p>
-        <p><span class="l">请假原因：</span><span class="r" style="color: #6e6e6e">拿快递</span></p>
-        <p><span class="l">发起位置：</span><span class="r"><span class="c">广东省河源市源城区</span></span></p>
-        <p><span class="l">抄送人：</span><span class="r">无</span></p>
-        <p><span class="l">目的地：</span><span class="r"><span class="c" style="color: #6e6e6e">广东省/河源市/源城区/商业街</span></span></p>
-        <p><span class="l">宿舍信息：</span><span class="r">-</span></p>
-        <p class="orange">本人承诺填写的信息真实有效，并对本次提交请假申请的信息真实性负责。</p>
-    </div>
-</div>
-<div id="tab">
-    <p>审批流程记录</p>
-    <div class="process">
-        <div class="block">
-            <span class="zero"></span>
-            <span class="center">蔡向健 - 发起申请</span>
-            <span class="theTime" id="time3"></span>
-        </div>
-        <span class="b"></span>
-        <div class="block">
-            <span class="zero zero2"></span>
-            <span class="center">一级：谢素青 - 审批<span style="color: rgb(36, 201, 58)">通过</span></span>
-            <span class="theTime" id="time4"></span>
-        </div>
-    </div>
-    <div class="opinion">
-        审批意见： 无
-    </div>
-</div>
+<!---->
+<!---->
 
 
-<div class="flex">
-    <div>转发</div>
 
-    <div>去销假</div>
-</div>
+
+
+</body>
+</html>
+
 <script>
+    function open1() {
+        document.getElementById('s2').style.display = '';
+    }
+    function click1() {
+        console.log("=========")
+        let vat1 = document.getElementsByClassName('van-tab')[0];
+        let vat2 = document.getElementsByClassName('van-tab')[1];
+        vat1.classList.remove("van-tab--active")
+        vat2.classList.add("van-tab--active");
+        document.getElementById('s5').style.display = 'none';
+        document.getElementById('clazz').style.cssText = 'width: 80px; transform: translateX(290px) translateX(-50%); transition-duration: 0.3s;';
+        document.getElementById('s4').style.display = '';
+    }
+
+    function click2() {
+        console.log("=========")
+        let vat1 = document.getElementsByClassName('van-tab')[0];
+        let vat2 = document.getElementsByClassName('van-tab')[1];
+        vat2.classList.remove("van-tab--active")
+        vat1.classList.add("van-tab--active");
+        document.getElementById('clazz').style.cssText = 'width: 80px; transform: translateX(100px) translateX(-50%); transition-duration: 0.3s;';
+        document.getElementById('s4').style.display = 'none';
+        document.getElementById('s5').style.display = '';
+    }
+    
+    function cancel() {
+        document.getElementById('s2').style.display = 'none';
+    }
+    
+    
     var date = new Date();
     let year = date.getFullYear();
-    let month = date.getMonth()+1;
-    month= month<10?"0"+month:month;
+    let month = date.getMonth() + 1;
+    month = month < 10 ? "0" + month : month;
     let day = date.getDate();//获取日期
-    day= day<10?"0"+day:day;
+    day = day < 10 ? "0" + day : day;
     let hour = date.getHours();
-    hour= hour<10?"0"+hour:hour;
+    hour = hour < 10 ? "0" + hour : hour;
     let minute = date.getMinutes();
-    minute= minute<10?"0"+minute:minute;
-
-    var show1= function(){
+    minute = minute < 10 ? "0" + minute : minute;
+    
+    var show1 = function () {
+        hour=hour-1;
         result=month+"-"+day+" "+hour+":"+"03";
-        document.getElementById("time1").innerHTML=result;
+        document.getElementById("time1").innerHTML = result;
     }
-
-    var show2= function(){
+    
+    var show2 = function () {
         hour = hour +4;
-        result=month+"-"+day+" "+hour+":"+"04";
-        document.getElementById("time2").innerHTML=result;
+        result=month+"-"+day+" "+hour+":"+"16";
+        document.getElementById("time2").innerHTML = result;
     }
-
-    var show3= function(){
-        day=day-1;
-        result=year+"-"+month+"-"+day+" "+"15"+":"+"32";
-        document.getElementById("time3").innerHTML=result;
+    
+    var show3 = function () {
+        day = day - 1;
+        result = month + "-" + day + " " + "15" + ":" + "32";
+        document.getElementById("time3").innerHTML = result;
     }
-    var show4= function(){
-        result=year+"-"+month+"-"+day+" "+"16"+":"+"14";
-        document.getElementById("time4").innerHTML=result;
+    var show4 = function () {
+        result = month + "-" + day + " " + "16" + ":" + "14";
+        document.getElementById("time4").innerHTML = result;
     }
-
 
     function gettime() {
         var ntm = Date.now();//获取当前时间戳（毫秒）
         var time = new Date(ntm);//毫秒转日期格式
-
+    
         //使用函数的方式进行定义
         function dateFormat(fmt, date) {
             var o = {
@@ -471,18 +474,15 @@
                     fmt = fmt.replace(RegExp.$1, (RegExp.$1.length == 1) ? (o[k]) : (("00" + o[k]).substr(("" + o[k]).length)));
             return fmt;
         }
-
+    
         var showtime = "当前时间:" + dateFormat("yyyy-MM-dd hh:mm:ss", time);
         document.getElementById('clock').innerHTML = showtime;
     }
-
+    
     show1();
     show2();
     show3();
     show4();
-    gettime();
     setInterval("gettime()", 1000);
-</script>
 
-</body>
-</html>
+</script>

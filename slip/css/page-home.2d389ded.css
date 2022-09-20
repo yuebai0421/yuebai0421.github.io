@@ -1,0 +1,40 @@
+.cat-list .bottom {
+	width: 26.66667vw;
+	height: 7.46667vw;
+	margin: 2.66667vw auto 0
+}
+
+.cat-list.manual.show-tip .bottom {
+	border: 1px solid #39f;
+	border-radius: 1.06667vw
+}
+
+.cat-list.manual.show-tip .bottom span {
+	color: #39f
+}
+
+.van-list__error-text,
+.van-list__finished-text,
+.van-list__loading {
+	color: #969799;
+	font-size: 3.73333vw;
+	line-height: 13.33333vw;
+	text-align: center
+}
+
+.van-list__placeholder {
+	height: 0;
+	pointer-events: none
+}
+
+.bus-record-list .empty-height {
+	height: calc(100% - 5.33333vw)
+}
+
+.page-home .why {
+	height: 5.33333vw
+}
+
+.changeTitle .van-dialog__header {
+	color: red
+}
