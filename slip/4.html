@@ -426,19 +426,23 @@
     month = month < 10 ? "0" + month : month;
     let day = date.getDate();//获取日期
     day = day < 10 ? "0" + day : day;
-    let hour = date.getHours();
-    hour = hour < 10 ? "0" + hour : hour;
+    
     let minute = date.getMinutes();
     minute = minute < 10 ? "0" + minute : minute;
     
     var show1 = function () {
+        let hour = date.getHours();
+       
         hour=hour-1;
+        hour = hour < 10 ? "0" + hour : hour;
         result=month+"-"+day+" "+hour+":"+"00";
         document.getElementById("time1").innerHTML = result;
     }
     
     var show2 = function () {
-        hour = hour +4;
+        let hour = date.getHours();
+        hour = hour +5;
+        hour = hour < 10 ? "0" + hour : hour;
         result=month+"-"+day+" "+hour+":"+"30";
         document.getElementById("time2").innerHTML = result;
     }
