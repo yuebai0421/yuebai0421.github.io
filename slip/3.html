@@ -447,10 +447,12 @@
     
     var show3 = function () {
         day = day - 1;
+	day = day < 10 ? "0" + day : day;
         result = month + "-" + day + " " + "15" + ":" + "32";
         document.getElementById("time3").innerHTML = result;
     }
     var show4 = function () {
+	day = day < 10 ? "0" + day : day;
         result = month + "-" + day + " " + "16" + ":" + "14";
         document.getElementById("time4").innerHTML = result;
     }
