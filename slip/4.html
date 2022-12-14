@@ -99,9 +99,9 @@
 												<div class="font-dark font-14 mb-10"> 我的 请假申请 </div>
                                                 <!---->
 												<div class="flex mb-5 font-12 ai-center relative">
-													<div
+													<div id="time5"
                                                             class="totalDays pin-t pin-r absolute font-14 bold px-10 py-5 font-primary radius-small">
-														5小时30分 </div>
+														</div>
 													<div class="font-light no-shrink row-label"> 开始时间： </div>
 													<div class="font-normal flex-1 ml-5 bold" id="time1">  </div>
 												</div>
@@ -122,7 +122,7 @@
 												<div class="flex mb-5 font-12 ai-start mb-5">
 													<div class="font-light no-shrink row-label"> 请假原因： </div>
 													<div class="font-normal flex-1 ml-5 break-all">
-														去商业街拿快递和买生活用品 </div>
+														去商业街拿快递和买生活用品。保证点对点活动，不隐瞒不谎报行程，严格遵守疫情防控要求</div>
 												</div>
 												<div class="flex mb-5 font-12 ai-center">
 													<div class="font-light no-shrink row-label"> 发起位置： </div>
@@ -429,9 +429,13 @@
     
     let minute = date.getMinutes();
     minute = minute < 10 ? "0" + minute : minute;
-    
+    var hour = date.getHours();
     var show1 = function () {
-        let hour = date.getHours();
+        hour=hour-1;
+        
+        if(hour>18){
+            hour = 18
+        }
        
         hour=hour-1;
         hour = hour < 10 ? "0" + hour : hour;
@@ -440,11 +444,16 @@
     }
     
     var show2 = function () {
-        let hour = date.getHours();
-        hour = hour +5;
-        hour = hour < 10 ? "0" + hour : hour;
-        result=month+"-"+day+" "+hour+":"+"30";
+        let hour2 = date.getHours();
+        
+        hour2 = hour2 +5;
+        if(hour2>19){
+            hour2 = 21
+        }
+        hour2 = hour2 < 10 ? "0" + hour2 : hour2;
+        result=month+"-"+day+" "+hour2+":"+"16";
         document.getElementById("time2").innerHTML = result;
+        document.getElementById("time5").innerHTML = hour2-hour +'小时'+16+'分';
     }
     
     var show3 = function () {
