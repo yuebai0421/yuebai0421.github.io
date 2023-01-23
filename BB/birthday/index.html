@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>生日快乐哦！</title>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <link href="./css/style.css" type="text/css" rel="stylesheet">
+    <script src="./js/jquery.js"></script>
+    <script src="./js/garden.js"></script>
+    <script src="./js/functions.js"></script>
+</head>
+
+<body>
+    <audio id="audio" src="./mp3/bg2.mp3" autoplay loop></audio>
+
+    <div id="mainDiv">
+        <div id="content">
+            <div id="code" style="font-size: 25px;display: none">
+
+                <span class="comments">我亲爱的雯雯宝贝</span><br />
+                <span class="comments">生日快乐呀（｡ò ∀ ó｡）！</span><br />
+                <span class="comments">今天是我第一次庆祝你生日</span><br />
+                <span class="comments">虽然没法陪在你身边</span><br />
+                <span class="comments">也没给你实质性的礼物</span><br />
+                <span class="comments">但我会为你送上一份真挚的祝福！</span><br /><br />
+                <span class="comments">为你画一个生日蛋糕，祝你生日快乐！</span><br />
+                <span class="comments">第一层，体贴和关怀！</span><br />
+                <span class="comments">第二层，浪漫和温馨！</span><br />
+                <span class="comments">中间夹层，甜蜜！！！</span><br />
+                <br><br>
+                <span class="comments">愿祝福萦绕着你，在你缤纷的人生之旅，在你永远与春天接壤的梦幻里。</span><br /><br />
+                <span class="comments"><a class="bb" target="_blank" href="./images/20230123204822.jpg">——爱你的猪猪宝贝</a></span>
+            
+            </div>
+            <div id="loveHeart">
+                <canvas id="garden"></canvas>
+                <div id="words">
+                    <div id="messages">
+                        <img src="./images/zsr.png">
+                    </div>
+                    <div id="loveu">
+                        <img src="./images/sr.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="copyright">
+            <center>
+                <link rel="stylesheet" href="./css/cuplayer.css">
+                <div style="position:absolute; top:50px; right:50px;">
+
+                    <div class="c-white fs-12 icon-play rotate" id="btn-play"></div>
+                    <div>点击开始</div>
+                </div>
+
+            </center>
+        </div>
+    </div>
+    <script type="text/javascript">
+        var offsetX = $("#loveHeart").width() / 2;
+        var offsetY = $("#loveHeart").height() / 2 - 55;
+        var together = new Date();
+        var aud = false;
+        together.setHours(8);
+        together.setMinutes(0);
+        together.setSeconds(0);
+        together.setMilliseconds(0);
+
+
+        $("#btn-play").click(function () {
+            $("#code").css("display", "block")
+            console.log("========");
+            var oAudio = $('#audio').get(0);
+            if (aud) {
+                oAudio.pause();
+            } else {
+                oAudio.play()
+            }
+
+            if (!document.createElement('canvas').getContext) {
+                var msg = document.createElement("div");
+                msg.id = "errorMsg";
+                msg.innerHTML = "您的浏览器已经过时!请使用非IE浏览器进行预览";
+                document.body.appendChild(msg);
+                $("#code").css("display", "none")
+                $("#copyright").css("position", "absolute");
+                $("#copyright").css("bottom", "10px");
+                document.execCommand("stop");
+            } else {
+
+                setTimeout(function () {
+                    startHeartAnimation();
+                }, 45000);
+
+                timeElapse(together);
+                setInterval(function () {
+                    timeElapse(together);
+                }, 500);
+
+                adjustCodePosition();
+                $("#code").typewriter();
+            }
+
+        });
+
+
+    </script>
+    </div>
+</body>
+
+</html>

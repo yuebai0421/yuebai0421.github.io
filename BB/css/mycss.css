@@ -1,0 +1,78 @@
+* {
+    margin: 0;
+    padding: 0;
+    cursor: url(../img/favicon0.ico), auto;
+    overflow: hidden;
+}
+
+#canvas {
+    background: #000;
+    display: block;
+}
+
+#me {
+    display: none;
+    width: 51px;
+    height: 55px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-size: 100% 100%;
+    background-image: url(../img/me.png);
+    z-index: 8;
+}
+
+#showtime {
+    color: rgb(255, 255, 255);
+    width: 251px;
+
+    position: absolute;
+    bottom: 0;
+    left: 44%;
+    z-index: 8;
+}
+
+#dialog {
+    /* width: 40px;
+				height: auto; */
+    display: none;
+    padding: 2px 5px;
+    position: absolute;
+    /* position: relative; */
+    bottom: 65px;
+    left: 10px;
+    color: aliceblue;
+    border: 2px solid #00d0be;
+    border-radius: 2px;
+    /* animation: dialog 3s linear; */
+}
+
+#dialog p {
+    position: relative;
+}
+
+#dialog span #after {
+    content: '';
+    width: 0px;
+    height: 0px;
+    /* background-color: #FFFFFF; */
+    position: absolute;
+    top: calc(100% + 2px);
+    left: 7px;
+    margin-left: -8px;
+    border-top: 8px solid #00D0BE;
+    border-right: 8px solid transparent;
+    border-left: 8px solid transparent;
+    z-index: 10;
+}
+
+@keyframes dialog {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        display: none;
+    }
+}
